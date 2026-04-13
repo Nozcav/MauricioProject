@@ -1,0 +1,149 @@
+<!-- Página de Preguntas Frecuentes -->
+<div class="faq-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Preguntas Frecuentes</h1>
+      <p class="hero-subtitle">Encuentra respuestas a las preguntas más comunes sobre nuestros productos y servicios.</p>
+    </div>
+  </section>
+
+  <!-- Búsqueda Rápida -->
+  <section class="busqueda-section">
+    <div class="container">
+      <div class="busqueda-container">
+        <span class="busqueda-icono">🔍</span>
+        <input type="text" placeholder="Busca tu pregunta aquí..." class="busqueda-input">
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorías de Preguntas -->
+  <section class="categorias-section">
+    <div class="container">
+      @for (categoria of categorias; track categoria.nombre; let i = $index) {
+        <div class="categoria-container">
+          <div class="categoria-header">
+            <span class="categoria-icono">{{ categoria.icono }}</span>
+            <h2>{{ categoria.nombre }}</h2>
+          </div>
+          
+          <div class="preguntas-lista">
+            @for (pregunta of categoria.preguntas; track pregunta.pregunta; let j = $index) {
+              <div class="pregunta-item" [class.abierta]="pregunta.abierta">
+                <div class="pregunta-header" (click)="togglePregunta(i, j)">
+                  <h3>{{ pregunta.pregunta }}</h3>
+                  <span class="pregunta-icono">{{ pregunta.abierta ? '−' : '+' }}</span>
+                </div>
+                @if (pregunta.abierta) {
+                  <div class="pregunta-respuesta">
+                    <p>{{ pregunta.respuesta }}</p>
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Guías Rápidas -->
+  <section class="guias-section">
+    <div class="container">
+      <h2>Guías Rápidas</h2>
+      <div class="guias-grid">
+        <div class="guia-card">
+          <span class="guia-icono">📏</span>
+          <h3>Guía de Tallas</h3>
+          <p>Aprende a medir tu talla de anillo, pulsera y collar correctamente.</p>
+          <a routerLink="/sobre-nosotros" class="guia-link">Ver guía →</a>
+        </div>
+        <div class="guia-card">
+          <span class="guia-icono">✨</span>
+          <h3>Cuidado de Joyas</h3>
+          <p>Consejos para mantener tus joyas brillantes y en perfecto estado.</p>
+          <a routerLink="/sobre-nosotros" class="guia-link">Ver guía →</a>
+        </div>
+        <div class="guia-card">
+          <span class="guia-icono">🎁</span>
+          <h3>Empaque de Regalo</h3>
+          <p>Opciones de empaque especial para hacer tu regalo aún más especial.</p>
+          <a routerLink="/sobre-nosotros" class="guia-link">Ver opciones →</a>
+        </div>
+        <div class="guia-card">
+          <span class="guia-icono">💳</span>
+          <h3>Métodos de Pago</h3>
+          <p>Información detallada sobre todas las opciones de pago disponibles.</p>
+          <a routerLink="/sobre-nosotros" class="guia-link">Ver métodos →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Información de Contacto -->
+  <section class="contacto-rapido-section">
+    <div class="container">
+      <h2>¿No encontraste lo que buscabas?</h2>
+      <p class="contacto-intro">Nuestro equipo de atención al cliente está listo para ayudarte.</p>
+      
+      <div class="contacto-opciones">
+        <div class="contacto-opcion">
+          <span class="opcion-icono">📧</span>
+          <h3>Email</h3>
+          <p>hola&#64;luxejoyas.com</p>
+          <p class="opcion-nota">Respuesta en 24 horas</p>
+        </div>
+        <div class="contacto-opcion">
+          <span class="opcion-icono">📞</span>
+          <h3>Teléfono</h3>
+          <p>+1 234 567 890</p>
+          <p class="opcion-nota">Lun - Vie: 9:00 - 19:00</p>
+        </div>
+        <div class="contacto-opcion">
+          <span class="opcion-icono">💬</span>
+          <h3>Chat en Vivo</h3>
+          <p>Disponible en horario laboral</p>
+          <p class="opcion-nota">Respuesta inmediata</p>
+        </div>
+        <div class="contacto-opcion">
+          <span class="opcion-icono">📱</span>
+          <h3>WhatsApp</h3>
+          <p>+1 234 567 890</p>
+          <p class="opcion-nota">Respuesta inmediata</p>
+        </div>
+      </div>
+      
+      <div class="contacto-cta">
+        <a routerLink="/contacto" class="contacto-button">Ir a Página de Contacto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Políticas Relacionadas -->
+  <section class="politicas-section">
+    <div class="container">
+      <h2>Políticas Importantes</h2>
+      <div class="politicas-grid">
+        <div class="politica-card">
+          <span class="politica-icono">🔄</span>
+          <h3>Política de Devoluciones</h3>
+          <p>30 días para devoluciones. Conoce los términos y condiciones completos.</p>
+          <a routerLink="/politicas-devolucion" class="politica-link">Leer más →</a>
+        </div>
+        <div class="politica-card">
+          <span class="politica-icono">🚚</span>
+          <h3>Política de Envíos</h3>
+          <p>Información sobre tiempos, costos y zonas de envío.</p>
+          <a routerLink="/politicas-devolucion" class="politica-link">Leer más →</a>
+        </div>
+        <div class="politica-card">
+          <span class="politica-icono">🔒</span>
+          <h3>Política de Privacidad</h3>
+          <p>Cómo protegemos y utilizamos tu información personal.</p>
+          <a routerLink="/politicas-devolucion" class="politica-link">Leer más →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,97 @@
+<nav class="navbar">
+  <!-- Logo, Buscador, Iconos -->
+  <div class="fila-superior">
+    <!-- Logo izquierda -->
+    <a routerLink="/" class="logo">
+      <span class="icono-moneda">L</span>
+      <span class="texto-logo">Luxe Joyas</span>
+    </a>
+
+    <!-- Buscador centro con autocompletado -->
+    <div class="buscador-container">
+      <form (submit)="onSearchSubmit(); $event.preventDefault()" class="buscador-form">
+        <div class="buscador-input-wrapper">
+          <span class="buscador-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="2"/>
+              <path d="M15 15l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <input 
+            type="text" 
+            class="buscador-input"
+            placeholder="Buscar por nombre o SKU"
+            [(ngModel)]="searchQuery"
+            name="searchQuery"
+            (input)="onSearchInput($event)"
+            (focus)="onFocus()"
+            (blur)="onBlur()"
+            autocomplete="off"
+          >
+          <button type="submit" class="buscador-btn">Buscar</button>
+        </div>
+        
+        <!-- Dropdown de autocompletado -->
+        <div class="autocomplete-dropdown" *ngIf="showDropdown">
+          <div class="autocomplete-header">
+            <span>Productos encontrados ({{searchResults.length}})</span>
+          </div>
+          <div class="autocomplete-results">
+            <div 
+              *ngFor="let product of searchResults" 
+              class="autocomplete-item"
+              (mousedown)="selectProduct(product)"
+            >
+              <img [src]="product.imagen" [alt]="product.nombre" class="autocomplete-image">
+              <div class="autocomplete-info">
+                <div class="autocomplete-name" [innerHTML]="highlightMatch(product.nombre)"></div>
+                <div class="autocomplete-sku">{{product.sku}}</div>
+              </div>
+              <div class="autocomplete-price">
+                ${{dataService.formatPrice(product.precio)}}
+              </div>
+            </div>
+          </div>
+          <div class="autocomplete-footer" (mousedown)="onSearchSubmit()">
+            Ver todos los resultados para "{{searchQuery}}"
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Iconos derecha -->
+    <div class="iconos-derecha">
+      @if (authService.isLoggedIn()) {
+        <button class="icon-button user-button" type="button" (click)="goToAccount()">
+          <span class="icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="icon-label">{{ authService.currentUser()?.nombre }}</span>
+        </button>
+      } @else {
+        <a routerLink="/login" class="icon-button login-button">
+          <span class="icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="icon-label">Login</span>
+        </a>
+      }
+      <a routerLink="/carrito" class="icon-button cart-button" aria-label="Carrito">
+        <span class="icon-svg">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M5 6h15l-1.5 9h-12L4 4H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="icon-label">Carrito</span>
+      </a>
+    </div>
+  </div>
+</nav>

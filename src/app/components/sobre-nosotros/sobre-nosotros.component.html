@@ -1,0 +1,157 @@
+<!-- Página Sobre Nosotros -->
+<div class="sobre-nosotros-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Sobre Nosotros</h1>
+      <p class="hero-subtitle">Pasión por la joyería de lujo desde 2011</p>
+    </div>
+  </section>
+
+  <!-- Historia Section -->
+  <section class="historia-section">
+    <div class="container">
+      <div class="historia-content">
+        <div class="historia-texto">
+          <h2>Nuestra Historia</h2>
+          <p>
+            Luxe Joyas nació en 2011 de la pasión por crear piezas únicas que cuenten historias. 
+            Lo que comenzó como un pequeño taller artesanal en el corazón de la ciudad, 
+            se ha convertido en una marca reconocida por su excelencia en diseño y calidad.
+          </p>
+          <p>
+            Nuestra fundadora, María García, soñaba con democratizar el acceso a la joyería de lujo, 
+            ofreciendo piezas exclusivas que combinaran técnicas tradicionales con diseños contemporáneos. 
+            Cada joya que creamos lleva consigo años de experiencia, dedicación y un profundo respeto 
+            por el arte de la joyería.
+          </p>
+          <p>
+            Hoy, más de 15 años después, seguimos fieles a nuestros orígenes: crear joyas que no solo 
+            adornen, sino que se conviertan en parte de la historia de quienes las llevan.
+          </p>
+        </div>
+        <div class="historia-imagen">
+          <div class="imagen-placeholder">
+            <span class="icono-grande">💎</span>
+            <p>Desde 2011</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión y Visión -->
+  <section class="mision-vision-section">
+    <div class="container">
+      <div class="mision-vision-grid">
+        <div class="mision-card">
+          <div class="card-icono">🎯</div>
+          <h3>Nuestra Misión</h3>
+          <p>
+            Crear joyas excepcionales que celebren los momentos más especiales de la vida, 
+            combinando artesanía tradicional con diseño innovador, y brindando una experiencia 
+            de compra única y personalizada a cada cliente.
+          </p>
+        </div>
+        <div class="vision-card">
+          <div class="card-icono">👁️</div>
+          <h3>Nuestra Visión</h3>
+          <p>
+            Ser reconocidos como la marca líder en joyería de lujo en América Latina, 
+            siendo referentes de calidad, diseño exclusivo y compromiso con la satisfacción 
+            del cliente, mientras mantenemos nuestras raíces artesanales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores Section -->
+  <section class="valores-section">
+    <div class="container">
+      <h2>Nuestros Valores</h2>
+      <div class="valores-grid">
+        @for (valor of valores; track valor.titulo) {
+          <div class="valor-card">
+            <span class="valor-icono">{{ valor.icono }}</span>
+            <h4>{{ valor.titulo }}</h4>
+            <p>{{ valor.descripcion }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Logros Section -->
+  <section class="logros-section">
+    <div class="container">
+      <h2>Nuestros Logros</h2>
+      <div class="logros-grid">
+        @for (logro of logros; track logro.texto) {
+          <div class="logro-item">
+            <span class="logro-numero">{{ logro.numero }}</span>
+            <span class="logro-texto">{{ logro.texto }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipo Section -->
+  <section class="equipo-section">
+    <div class="container">
+      <h2>Nuestro Equipo</h2>
+      <p class="equipo-intro">
+        Detrás de cada joya hay un equipo apasionado de profesionales dedicados a la excelencia.
+      </p>
+      <div class="equipo-grid">
+        @for (miembro of equipo; track miembro.nombre) {
+          <div class="equipo-card">
+            <div class="equipo-imagen">{{ miembro.imagen }}</div>
+            <h4>{{ miembro.nombre }}</h4>
+            <span class="equipo-cargo">{{ miembro.cargo }}</span>
+            <p>{{ miembro.descripcion }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso Section -->
+  <section class="proceso-section">
+    <div class="container">
+      <h2>Nuestro Proceso de Creación</h2>
+      <div class="proceso-grid">
+        <div class="proceso-step">
+          <div class="step-numero">1</div>
+          <h4>Diseño</h4>
+          <p>Nuestros diseñadores crean bocetos únicos inspirados en las últimas tendencias y tradiciones clásicas.</p>
+        </div>
+        <div class="proceso-step">
+          <div class="step-numero">2</div>
+          <h4>Selección de Materiales</h4>
+          <p>Elegimos cuidadosamente los materiales más finos, certificados por proveedores de confianza.</p>
+        </div>
+        <div class="proceso-step">
+          <div class="step-numero">3</div>
+          <h4>Artesanía</h4>
+          <p>Maestros joyeros dan vida a cada pieza con técnicas tradicionales perfeccionadas con el tiempo.</p>
+        </div>
+        <div class="proceso-step">
+          <div class="step-numero">4</div>
+          <h4>Control de Calidad</h4>
+          <p>Cada pieza pasa por rigurosos controles para garantizar la perfección en cada detalle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>¿Listo para Descubrir Nuestra Colección?</h2>
+      <p>Explora nuestras piezas exclusivas y encuentra la joya perfecta para ti.</p>
+      <a routerLink="/tienda" class="cta-button">Explorar Tienda</a>
+    </div>
+  </section>
+</div>

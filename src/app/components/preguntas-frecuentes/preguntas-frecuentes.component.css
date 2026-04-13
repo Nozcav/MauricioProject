@@ -1,0 +1,449 @@
+/* Página de Preguntas Frecuentes - Estilos */
+.faq-page {
+  min-height: 100vh;
+  background-color: var(--color-principal);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: var(--color-texto-claro);
+  font-style: italic;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Búsqueda Section */
+.busqueda-section {
+  padding: 60px 20px;
+  background-color: var(--color-apoyo);
+}
+
+.busqueda-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.busqueda-icono {
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.busqueda-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--color-texto-claro);
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.busqueda-input:focus {
+  outline: none;
+}
+
+.busqueda-input::placeholder {
+  color: var(--color-apoyo);
+}
+
+/* Categorías Section */
+.categorias-section {
+  padding: 80px 20px;
+  background-color: var(--color-principal);
+}
+
+.categoria-container {
+  margin-bottom: 50px;
+}
+
+.categoria-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.categoria-icono {
+  font-size: 36px;
+}
+
+.categoria-header h2 {
+  font-size: 28px;
+  color: var(--color-secundario);
+  font-family: 'Georgia', serif;
+}
+
+.preguntas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pregunta-item {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.pregunta-item:hover {
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.15);
+}
+
+.pregunta-item.abierta {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.pregunta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pregunta-header:hover {
+  background-color: rgba(212, 175, 55, 0.05);
+}
+
+.pregunta-header h3 {
+  font-size: 17px;
+  color: var(--color-texto-claro);
+  font-weight: 500;
+  margin: 0;
+  flex: 1;
+  padding-right: 15px;
+}
+
+.pregunta-icono {
+  font-size: 24px;
+  color: var(--color-secundario);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.pregunta-respuesta {
+  padding: 0 25px 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pregunta-respuesta p {
+  color: var(--color-texto-claro);
+  line-height: 1.7;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Guías Section */
+.guias-section {
+  padding: 80px 20px;
+  background-color: var(--color-apoyo);
+}
+
+.guias-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+}
+
+.guias-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.guia-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.guia-icono {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.guia-card h3 {
+  font-size: 20px;
+  color: var(--color-secundario);
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.guia-card p {
+  color: var(--color-texto-claro);
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.guia-link {
+  color: var(--color-secundario);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.guia-link:hover {
+  color: var(--color-acento-dorado);
+  text-decoration: underline;
+}
+
+/* Contacto Rápido Section */
+.contacto-rapido-section {
+  padding: 80px 20px;
+  background-color: var(--color-principal);
+}
+
+.contacto-rapido-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.contacto-intro {
+  text-align: center;
+  color: var(--color-texto-claro);
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.contacto-opciones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.contacto-opcion {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-opcion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.opcion-icono {
+  font-size: 45px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.contacto-opcion h3 {
+  font-size: 20px;
+  color: var(--color-secundario);
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.contacto-opcion p {
+  color: var(--color-texto-claro);
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.opcion-nota {
+  color: var(--color-apoyo);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.contacto-cta {
+  text-align: center;
+}
+
+.contacto-button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-acento-dorado) 100%);
+  color: var(--color-principal);
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+/* Políticas Section */
+.politicas-section {
+  padding: 80px 20px;
+  background-color: var(--color-apoyo);
+}
+
+.politicas-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+}
+
+.politicas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.politica-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.politica-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.politica-icono {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.politica-card h3 {
+  font-size: 20px;
+  color: var(--color-secundario);
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.politica-card p {
+  color: var(--color-texto-claro);
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.politica-link {
+  color: var(--color-secundario);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.politica-link:hover {
+  color: var(--color-acento-dorado);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .guias-grid,
+  .contacto-opciones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .politicas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  
+  .guias-grid,
+  .contacto-opciones,
+  .politicas-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .categoria-header h2 {
+    font-size: 24px;
+  }
+  
+  .pregunta-header h3 {
+    font-size: 15px;
+  }
+}

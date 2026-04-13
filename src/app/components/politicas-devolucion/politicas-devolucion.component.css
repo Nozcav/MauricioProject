@@ -1,0 +1,583 @@
+/* Página de Políticas de Devolución - Estilos */
+.politicas-page {
+  min-height: 100vh;
+  background-color: var(--color-principal);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: var(--color-texto-claro);
+  font-style: italic;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Resumen Section */
+.resumen-section {
+  padding: 60px 20px;
+  background-color: var(--color-apoyo);
+}
+
+.resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.resumen-item {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resumen-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.resumen-icono {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.resumen-item h3 {
+  font-size: 24px;
+  color: var(--color-secundario);
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.resumen-item p {
+  color: var(--color-texto-claro);
+  font-size: 15px;
+}
+
+/* Políticas Detalladas Section */
+.politicas-detalladas-section {
+  padding: 80px 20px;
+  background-color: var(--color-principal);
+}
+
+.politicas-detalladas-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+}
+
+.politicas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.politica-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 35px;
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.politica-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.politica-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.politica-icono {
+  font-size: 40px;
+}
+
+.politica-header h3 {
+  font-size: 24px;
+  color: var(--color-secundario);
+  font-family: 'Georgia', serif;
+}
+
+.politica-descripcion {
+  color: var(--color-texto-claro);
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.politica-detalles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.politica-detalles li {
+  color: var(--color-texto-claro);
+  font-size: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  padding-left: 25px;
+  position: relative;
+}
+
+.politica-detalles li:last-child {
+  border-bottom: none;
+}
+
+.politica-detalles li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-secundario);
+  font-weight: bold;
+}
+
+/* Garantías Section */
+.garantias-section {
+  padding: 80px 20px;
+  background-color: var(--color-apoyo);
+}
+
+.garantias-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+}
+
+.garantias-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.garantia-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.garantia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.garantia-icono {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.garantia-card h3 {
+  font-size: 20px;
+  color: var(--color-secundario);
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.garantia-card p {
+  color: var(--color-texto-claro);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Proceso Section */
+.proceso-section {
+  padding: 80px 20px;
+  background-color: var(--color-principal);
+}
+
+.proceso-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+}
+
+.proceso-pasos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.paso-item {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paso-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.paso-numero {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-acento-dorado) 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-principal);
+  flex-shrink: 0;
+}
+
+.paso-contenido h3 {
+  font-size: 20px;
+  color: var(--color-secundario);
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.paso-contenido p {
+  color: var(--color-texto-claro);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 80px 20px;
+  background-color: var(--color-apoyo);
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+}
+
+.faq-lista {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.15);
+}
+
+.faq-item.abierta {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-header:hover {
+  background-color: rgba(212, 175, 55, 0.05);
+}
+
+.faq-header h3 {
+  font-size: 17px;
+  color: var(--color-texto-claro);
+  font-weight: 500;
+  margin: 0;
+  flex: 1;
+  padding-right: 15px;
+}
+
+.faq-icono {
+  font-size: 24px;
+  color: var(--color-secundario);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.faq-respuesta {
+  padding: 0 25px 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-respuesta p {
+  color: var(--color-texto-claro);
+  line-height: 1.7;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Contacto Section */
+.contacto-section {
+  padding: 80px 20px;
+  background-color: var(--color-principal);
+}
+
+.contacto-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.contacto-intro {
+  text-align: center;
+  color: var(--color-texto-claro);
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.contacto-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.contacto-icono {
+  font-size: 45px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.contacto-card h3 {
+  font-size: 20px;
+  color: var(--color-secundario);
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.contacto-card p {
+  color: var(--color-texto-claro);
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.contacto-nota {
+  color: var(--color-apoyo);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.contacto-cta {
+  text-align: center;
+}
+
+.contacto-button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-acento-dorado) 100%);
+  color: var(--color-principal);
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+/* Documentos Section */
+.documentos-section {
+  padding: 80px 20px;
+  background-color: var(--color-apoyo);
+}
+
+.documentos-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+}
+
+.documentos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.documento-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.documento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.documento-icono {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.documento-card h3 {
+  font-size: 20px;
+  color: var(--color-secundario);
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.documento-card p {
+  color: var(--color-texto-claro);
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.documento-link {
+  color: var(--color-secundario);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.documento-link:hover {
+  color: var(--color-acento-dorado);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .resumen-grid,
+  .garantias-grid,
+  .contacto-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .politicas-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .documentos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  
+  .resumen-grid,
+  .garantias-grid,
+  .contacto-grid,
+  .documentos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .paso-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .paso-numero {
+    margin: 0 auto;
+  }
+}

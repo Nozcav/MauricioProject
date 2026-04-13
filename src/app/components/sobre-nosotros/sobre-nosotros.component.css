@@ -1,0 +1,477 @@
+/* Página Sobre Nosotros - Estilos */
+.sobre-nosotros-page {
+  min-height: 100vh;
+  background-color: var(--color-principal);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: var(--color-texto-claro);
+  font-style: italic;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Historia Section */
+.historia-section {
+  padding: 80px 20px;
+  background-color: var(--color-apoyo);
+}
+
+.historia-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.historia-texto h2 {
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 30px;
+  font-family: 'Georgia', serif;
+}
+
+.historia-texto p {
+  color: var(--color-texto-claro);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.historia-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-placeholder {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--color-secundario);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+}
+
+.icono-grande {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.imagen-placeholder p {
+  color: var(--color-secundario);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Misión y Visión Section */
+.mision-vision-section {
+  padding: 80px 20px;
+  background-color: var(--color-principal);
+}
+
+.mision-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.mision-card,
+.vision-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mision-card:hover,
+.vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.card-icono {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.mision-card h3,
+.vision-card h3 {
+  font-size: 28px;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.mision-card p,
+.vision-card p {
+  color: var(--color-texto-claro);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* Valores Section */
+.valores-section {
+  padding: 80px 20px;
+  background-color: var(--color-apoyo);
+}
+
+.valores-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.valor-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.valor-icono {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.valor-card h4 {
+  font-size: 20px;
+  color: var(--color-secundario);
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.valor-card p {
+  color: var(--color-texto-claro);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Logros Section */
+.logros-section {
+  padding: 80px 20px;
+  background-color: var(--color-principal);
+}
+
+.logros-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+}
+
+.logros-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.logro-item {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.logro-numero {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--color-secundario);
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.logro-texto {
+  color: var(--color-texto-claro);
+  font-size: 16px;
+}
+
+/* Equipo Section */
+.equipo-section {
+  padding: 80px 20px;
+  background-color: var(--color-apoyo);
+}
+
+.equipo-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.equipo-intro {
+  text-align: center;
+  color: var(--color-texto-claro);
+  font-size: 18px;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.equipo-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equipo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.equipo-imagen {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.equipo-card h4 {
+  font-size: 22px;
+  color: var(--color-secundario);
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.equipo-cargo {
+  color: var(--color-acento-dorado);
+  font-size: 14px;
+  display: block;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.equipo-card p {
+  color: var(--color-texto-claro);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Proceso Section */
+.proceso-section {
+  padding: 80px 20px;
+  background-color: var(--color-principal);
+}
+
+.proceso-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+}
+
+.proceso-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.proceso-step {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  position: relative;
+}
+
+.step-numero {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-acento-dorado) 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-principal);
+  margin: 0 auto 20px;
+}
+
+.proceso-step h4 {
+  font-size: 20px;
+  color: var(--color-secundario);
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.proceso-step p {
+  color: var(--color-texto-claro);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+}
+
+.cta-section h2 {
+  font-size: 36px;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section p {
+  color: var(--color-texto-claro);
+  font-size: 18px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-acento-dorado) 100%);
+  color: var(--color-principal);
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .valores-grid,
+  .logros-grid,
+  .proceso-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .equipo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  
+  .historia-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .mision-vision-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .valores-grid,
+  .logros-grid,
+  .proceso-grid,
+  .equipo-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .imagen-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .icono-grande {
+    font-size: 60px;
+  }
+}

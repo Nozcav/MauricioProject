@@ -1,0 +1,209 @@
+<!-- Página de Políticas de Devolución -->
+<div class="politicas-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Políticas de Devolución</h1>
+      <p class="hero-subtitle">Tu satisfacción es nuestra prioridad. Conoce nuestras políticas claras y justas.</p>
+    </div>
+  </section>
+
+  <!-- Resumen Rápido -->
+  <section class="resumen-section">
+    <div class="container">
+      <div class="resumen-grid">
+        <div class="resumen-item">
+          <span class="resumen-icono">📅</span>
+          <h3>30 Días</h3>
+          <p>Para devoluciones y cambios</p>
+        </div>
+        <div class="resumen-item">
+          <span class="resumen-icono">🔄</span>
+          <h3>Proceso Simple</h3>
+          <p>Devuelve fácilmente</p>
+        </div>
+        <div class="resumen-item">
+          <span class="resumen-icono">💰</span>
+          <h3>Reembolso Rápido</h3>
+          <p>5-10 días hábiles</p>
+        </div>
+        <div class="resumen-item">
+          <span class="resumen-icono">🛡️</span>
+          <h3>Garantía Total</h3>
+          <p>Calidad asegurada</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Políticas Detalladas -->
+  <section class="politicas-detalladas-section">
+    <div class="container">
+      <h2>Nuestras Políticas</h2>
+      <div class="politicas-grid">
+        @for (politica of politicas; track politica.titulo) {
+          <div class="politica-card">
+            <div class="politica-header">
+              <span class="politica-icono">{{ politica.icono }}</span>
+              <h3>{{ politica.titulo }}</h3>
+            </div>
+            <p class="politica-descripcion">{{ politica.descripcion }}</p>
+            <ul class="politica-detalles">
+              @for (detalle of politica.detalles; track detalle) {
+                <li>{{ detalle }}</li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Garantías -->
+  <section class="garantias-section">
+    <div class="container">
+      <h2>Nuestras Garantías</h2>
+      <div class="garantias-grid">
+        @for (garantia of garantias; track garantia.titulo) {
+          <div class="garantia-card">
+            <span class="garantia-icono">{{ garantia.icono }}</span>
+            <h3>{{ garantia.titulo }}</h3>
+            <p>{{ garantia.descripcion }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso Paso a Paso -->
+  <section class="proceso-section">
+    <div class="container">
+      <h2>Proceso de Devolución Paso a Paso</h2>
+      <div class="proceso-pasos">
+        <div class="paso-item">
+          <div class="paso-numero">1</div>
+          <div class="paso-contenido">
+            <h3>Contacta a Servicio al Cliente</h3>
+            <p>Envía un correo a hola&#64;luxejoyas.com o llama al +1 234 567 890 con tu número de pedido y motivo de devolución.</p>
+          </div>
+        </div>
+        <div class="paso-item">
+          <div class="paso-numero">2</div>
+          <div class="paso-contenido">
+            <h3>Recibe tu Número RMA</h3>
+            <p>Te asignaremos un número de Autorización de Devolución de Mercancía (RMA) y te enviaremos las instrucciones.</p>
+          </div>
+        </div>
+        <div class="paso-item">
+          <div class="paso-numero">3</div>
+          <div class="paso-contenido">
+            <h3>Empaqueta la Joya</h3>
+            <p>Empaqueta la joya de forma segura con su empaque original, certificado y todos los accesorios. Incluye el número RMA.</p>
+          </div>
+        </div>
+        <div class="paso-item">
+          <div class="paso-numero">4</div>
+          <div class="paso-contenido">
+            <h3>Envía el Paquete</h3>
+            <p>Envía el paquete a la dirección que te proporcionaremos. Te recomendamos usar un servicio con número de seguimiento.</p>
+          </div>
+        </div>
+        <div class="paso-item">
+          <div class="paso-numero">5</div>
+          <div class="paso-contenido">
+            <h3>Procesamos tu Devolución</h3>
+            <p>Una vez recibido, verificaremos la pieza y procesaremos tu reembolso o cambio en un plazo de 5-10 días hábiles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Preguntas Frecuentes sobre Devoluciones</h2>
+      <div class="faq-lista">
+        @for (faq of preguntasFrecuentes; track faq.pregunta; let i = $index) {
+          <div class="faq-item" [class.abierta]="faq.abierta">
+            <div class="faq-header" (click)="togglePregunta(i)">
+              <h3>{{ faq.pregunta }}</h3>
+              <span class="faq-icono">{{ faq.abierta ? '−' : '+' }}</span>
+            </div>
+            @if (faq.abierta) {
+              <div class="faq-respuesta">
+                <p>{{ faq.respuesta }}</p>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Información de Contacto -->
+  <section class="contacto-section">
+    <div class="container">
+      <h2>¿Necesitas Ayuda?</h2>
+      <p class="contacto-intro">Nuestro equipo de atención al cliente está listo para asistirte con cualquier consulta.</p>
+      
+      <div class="contacto-grid">
+        <div class="contacto-card">
+          <span class="contacto-icono">📧</span>
+          <h3>Email</h3>
+          <p>hola&#64;luxejoyas.com</p>
+          <p class="contacto-nota">Respuesta en 24 horas</p>
+        </div>
+        <div class="contacto-card">
+          <span class="contacto-icono">📞</span>
+          <h3>Teléfono</h3>
+          <p>+1 234 567 890</p>
+          <p class="contacto-nota">Lun - Vie: 9:00 - 19:00</p>
+        </div>
+        <div class="contacto-card">
+          <span class="contacto-icono">💬</span>
+          <h3>Chat en Vivo</h3>
+          <p>Disponible en horario laboral</p>
+          <p class="contacto-nota">Respuesta inmediata</p>
+        </div>
+        <div class="contacto-card">
+          <span class="contacto-icono">📱</span>
+          <h3>WhatsApp</h3>
+          <p>+1 234 567 890</p>
+          <p class="contacto-nota">Respuesta inmediata</p>
+        </div>
+      </div>
+      
+      <div class="contacto-cta">
+        <a routerLink="/contacto" class="contacto-button">Ir a Página de Contacto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentos Relacionados -->
+  <section class="documentos-section">
+    <div class="container">
+      <h2>Documentos Relacionados</h2>
+      <div class="documentos-grid">
+        <div class="documento-card">
+          <span class="documento-icono">📜</span>
+          <h3>Términos y Condiciones</h3>
+          <p>Lee nuestros términos completos de servicio y compra.</p>
+          <a routerLink="/sobre-nosotros" class="documento-link">Leer más →</a>
+        </div>
+        <div class="documento-card">
+          <span class="documento-icono">🔒</span>
+          <h3>Política de Privacidad</h3>
+          <p>Conoce cómo protegemos tu información personal.</p>
+          <a routerLink="/sobre-nosotros" class="documento-link">Leer más →</a>
+        </div>
+        <div class="documento-card">
+          <span class="documento-icono">🚚</span>
+          <h3>Política de Envíos</h3>
+          <p>Información sobre tiempos, costos y zonas de envío.</p>
+          <a routerLink="/sobre-nosotros" class="documento-link">Leer más →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

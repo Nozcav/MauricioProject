@@ -1,0 +1,61 @@
+<div class="producto-detalle" *ngIf="producto">
+  <div class="producto-contenido">
+    <!-- Imagen del producto -->
+    <div class="producto-imagen">
+      <img [src]="producto.imagen" [alt]="producto.nombre">
+      <span class="badge">{{ producto.badge || '✨ Nuevo' }}</span>
+    </div>
+    
+    <!-- Información del producto -->
+    <div class="producto-info">
+      <span class="categoria">{{ producto.categoria }}</span>
+      <h1 class="nombre">{{ producto.nombre }}</h1>
+      <div class="sku">SKU: {{ producto.sku }}</div>
+      
+      <div class="precios">
+        <span class="precio-actual">${{ formatPrice(producto.precio) }}</span>
+        <span class="precio-anterior" *ngIf="producto.precioAnterior">${{ formatPrice(producto.precioAnterior) }}</span>
+        <span class="descuento" *ngIf="producto.precioAnterior">{{ ((producto.precioAnterior - producto.precio) / producto.precioAnterior * 100) | number:'1.0-0' }}% OFF</span>
+      </div>
+      
+      <p class="descripcion">{{ producto.tipo }} - {{ producto.material }}</p>
+      
+      <!-- Características -->
+      <div class="caracteristicas">
+        <h3>Características</h3>
+        <ul>
+          <li>✓ Material: {{ producto.material }}</li>
+          <li>✓ Categoría: {{ producto.categoria }}</li>
+          <li>✓ Tipo: {{ producto.tipo }}</li>
+          <li>✓ Incluye: Caja de regalo premium</li>
+        </ul>
+      </div>
+      
+      <!-- Cantidad y Agregar -->
+      <div class="acciones">
+        <div class="cantidad">
+          <button (click)="cambiarCantidad(-1)">−</button>
+          <span>{{ cantidad }}</span>
+          <button (click)="cambiarCantidad(1)">+</button>
+        </div>
+        
+        <button class="btn-agregar" (click)="agregarAlCarrito()">
+          🛒 Agregar al Carrito
+        </button>
+      </div>
+      
+      <!-- Info adicional -->
+      <div class="info-adicional">
+        <div class="info-item">🚚 Envío gratis en pedidos mayores a $100</div>
+        <div class="info-item">↩️ Devolución gratis en 30 días</div>
+        <div class="info-item">🔒 Pago 100% seguro</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="producto-detalle" *ngIf="!producto">
+  <div class="producto-contenido">
+    <p>Producto no encontrado</p>
+  </div>
+</div>

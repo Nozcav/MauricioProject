@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Paleta de colores - Joyería de Lujo */
+:root {
+  /* Colores principales */
+  --color-principal: #0F0F0F;        /* Negro elegante / lujo */
+  --color-secundario: #D4AF37;       /* Dorado clásico de joyería */
+  --color-apoyo: #2C2C2C;            /* Gris oscuro sofisticado */
+  --color-fondo-claro: #F7F5F2;      /* Marfil suave / fondo premium */
+  
+  /* Acentos visuales */
+  --color-acento-dorado: #C9A227;    /* Dorado suave */
+  --color-acento-tarjeta: #E8E3D9;   /* Para tarjetas o secciones destacadas */
+  
+  /* Colores de texto */
+  --color-texto-principal: #0F0F0F;
+  --color-texto-secundario: #2C2C2C;
+  --color-texto-claro: #F7F5F2;
+  
+  /* Colores de fondo */
+  --color-fondo-principal: #F7F5F2;
+  --color-fondo-secundario: #E8E3D9;
+  --color-fondo-oscuro: #0F0F0F;
+  
+  /* Colores de borde */
+  --color-borde: #E8E3D9;
+  --color-borde-oscuro: #2C2C2C;
+  
+  /* Estados */
+  --color-hover: #C9A227;
+  --color-active: #D4AF37;
+  --color-focus: #D4AF37;
+}
+
+/* Eliminar márgenes por defecto del navegador */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-fondo-principal);
+  color: var(--color-texto-principal);
+}

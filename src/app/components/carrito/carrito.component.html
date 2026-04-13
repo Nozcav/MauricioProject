@@ -1,0 +1,73 @@
+<div class="carrito">
+  <div class="carrito-header">
+    <h1>🛒 Carrito de Compras</h1>
+  </div>
+  
+  @if (showCheckoutSuccess) {
+    <div class="checkout-success">
+      <div class="success-content">
+        <span class="success-icon">✅</span>
+        <h2>¡Pedido Realizado!</h2>
+        <p>Tu pedido ha sido registrado exitosamente.</p>
+        <p>Recibirás un correo de confirmación pronto.</p>
+        <div class="success-actions">
+          <a routerLink="/mi-cuenta" class="btn-primary">Ver Mis Pedidos</a>
+          <button class="btn-secondary" (click)="seguirComprando()">Seguir Comprando</button>
+        </div>
+      </div>
+    </div>
+  } @else if (productos.length > 0) {
+    <div class="carrito-contenido">
+      <div class="productos-lista">
+        @for (producto of productos; track producto.id) {
+          <div class="carrito-item">
+            <img [src]="producto.imagen" [alt]="producto.nombre" class="item-imagen">
+            <div class="item-detalles">
+              <h3>{{ producto.nombre }}</h3>
+              <p class="item-precio">${{ formatPrice(producto.precio) }} c/u</p>
+            </div>
+            <div class="item-cantidad">
+              <button (click)="cambiarCantidad(producto, -1)" class="btn-cantidad">−</button>
+              <span>{{ producto.cantidad }}</span>
+              <button (click)="cambiarCantidad(producto, 1)" class="btn-cantidad">+</button>
+            </div>
+            <div class="item-total">
+              <p class="total">${{ formatPrice(calcularTotal(producto)) }}</p>
+              <button class="btn-eliminar" (click)="eliminarProducto(producto)">🗑️</button>
+            </div>
+          </div>
+        }
+      </div>
+      
+      <div class="resumen">
+        <h2>Resumen del Pedido</h2>
+        <div class="resumen-item">
+          <span>Subtotal</span>
+          <span>${{ formatPrice(subtotal) }}</span>
+        </div>
+        <div class="resumen-item">
+          <span>Envío</span>
+          <span>{{ envio === 0 ? 'GRATIS' : '$' + formatPrice(envio) }}</span>
+        </div>
+        <div class="resumen-total">
+          <span>Total</span>
+          <span>${{ formatPrice(total) }}</span>
+        </div>
+        <button class="btn-checkout" (click)="procederAlPago()">Proceder al Pago</button>
+        @if (envio === 0) {
+          <p class="envio-gratis-msg">🚚 ¡Envío gratis aplicado!</p>
+        } @else {
+          <p class="envio-info">🚚 Añade ${{ formatPrice(100000 - subtotal) }} más para envío gratis</p>
+        }
+        <a routerLink="/tienda" class="btn-seguir">← Continuar Comprando</a>
+      </div>
+    </div>
+  } @else {
+    <div class="carrito-vacio">
+      <div class="vacio-icono">🛒</div>
+      <h2>Tu carrito está vacío</h2>
+      <p>Parece que aún no has añadido productos a tu carrito.</p>
+      <a routerLink="/tienda" class="btn-seguir-tienda">Explorar Productos</a>
+    </div>
+  }
+</div>

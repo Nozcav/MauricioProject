@@ -1,0 +1,116 @@
+<div class="tienda">
+  <div class="tienda-header">
+    <h1>{{ categoriaSeleccionada === 'Todos' ? 'Tienda' : categoriaSeleccionada }}</h1>
+    <p>Descubre nuestra colección exclusiva de joyería de lujo</p>
+  </div>
+  
+  <div class="tienda-layout">
+    <aside class="filtros-sidebar">
+      <div class="sidebar-header">
+        <h3>🔍 Filtros</h3>
+        @if (hayFiltrosActivos) {
+          <button class="btn-limpiar" (click)="limpiarFiltros()">
+            Limpiar todo
+          </button>
+        }
+      </div>
+      
+      <div class="filtro-seccion">
+        <h4>Categoría</h4>
+        <div class="filtro-opciones">
+          @for (cat of categorias; track cat) {
+            <button class="filtro-opcion" [class.active]="categoriaSeleccionada === cat" (click)="seleccionarCategoria(cat)">
+              {{ cat }}
+            </button>
+          }
+        </div>
+      </div>
+      
+      <div class="filtro-seccion">
+        <h4>Material</h4>
+        <div class="filtro-opciones">
+          @for (mat of materiales; track mat) {
+            <button class="filtro-opcion" [class.active]="materialSeleccionado === mat" (click)="seleccionarMaterial(mat)">
+              {{ mat }}
+            </button>
+          }
+        </div>
+      </div>
+      
+      <div class="filtro-seccion">
+        <h4>Precio</h4>
+        <div class="filtro-opciones">
+          @for (rango of rangosPrecio; track rango.label) {
+            <button class="filtro-opcion" [class.active]="rangoPrecioSeleccionado.label === rango.label" (click)="seleccionarRangoPrecio(rango)">
+              {{ rango.label }}
+            </button>
+          }
+        </div>
+      </div>
+      
+      <div class="filtro-seccion">
+        <h4>Tipo de Joya</h4>
+        <div class="filtro-opciones">
+          @for (tipo of tiposJoyeria; track tipo) {
+            <button class="filtro-opcion" [class.active]="tipoSeleccionado === tipo" (click)="seleccionarTipo(tipo)">
+              {{ tipo }}
+            </button>
+          }
+        </div>
+      </div>
+    </aside>
+    
+    <main class="productos-area">
+      <div class="resultados-info">
+        <p>Mostrando <strong>{{ productosFiltrados.length }}</strong> producto(s)</p>
+      </div>
+      
+      <div class="productos-grid">
+        @for (producto of productosFiltrados; track producto.id) {
+          <div class="producto-card" (click)="verProducto(producto.id)">
+            <div class="producto-imagen-container">
+              <img [src]="producto.imagen" [alt]="producto.nombre" class="producto-imagen">
+              <span class="producto-badge">{{ producto.badge }}</span>
+              <div class="producto-acciones">
+                <button 
+                  class="btn-accion btn-favorito" 
+                  [class.active]="isFavorite(producto.id)"
+                  (click)="toggleFavorite(producto, $event)"
+                  title="Agregar a favoritos">
+                  {{ isFavorite(producto.id) ? '❤️' : '🤍' }}
+                </button>
+                <button 
+                  class="btn-accion btn-carrito" 
+                  (click)="addToCart(producto, $event)"
+                  title="Agregar al carrito">
+                  🛒
+                </button>
+              </div>
+            </div>
+            <div class="producto-info">
+              <span class="producto-categoria">{{ producto.categoria }}</span>
+              <h3 class="producto-nombre">{{ producto.nombre }}</h3>
+              <div class="producto-meta">
+                <span class="producto-material">💎 {{ producto.material }}</span>
+                <span class="producto-tipo">✨ {{ producto.tipo }}</span>
+              </div>
+              <div class="producto-precio">
+                <span class="precio-actual">${{ formatPrice(producto.precio) }}</span>
+                @if (producto.precioAnterior) {
+                  <span class="precio-anterior">${{ formatPrice(producto.precioAnterior) }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+      
+      @if (productosFiltrados.length === 0) {
+        <div class="no-resultados">
+          <h3>😔 No hay productos con estos filtros</h3>
+          <p>Intenta con otras opciones o <button class="btn-link" (click)="limpiarFiltros()">limpia los filtros</button></p>
+        </div>
+      }
+    </main>
+  </div>
+</div>

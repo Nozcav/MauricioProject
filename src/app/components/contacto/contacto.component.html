@@ -1,0 +1,206 @@
+<!-- Página de Contacto -->
+<div class="contacto-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Contáctanos</h1>
+      <p class="hero-subtitle">Estamos aquí para ayudarte. Tu satisfacción es nuestra prioridad.</p>
+    </div>
+  </section>
+
+  <!-- Información de Contacto -->
+  <section class="info-contacto-section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="info-icono">📧</span>
+          <h3>Email</h3>
+          <p>hola&#64;luxejoyas.com</p>
+          <p class="info-nota">Respuesta en 24 horas</p>
+        </div>
+        <div class="info-card">
+          <span class="info-icono">📞</span>
+          <h3>Teléfono</h3>
+          <p>+1 234 567 890</p>
+          <p class="info-nota">Lun - Vie: 9:00 - 19:00</p>
+        </div>
+        <div class="info-card">
+          <span class="info-icono">💬</span>
+          <h3>WhatsApp</h3>
+          <p>+1 234 567 890</p>
+          <p class="info-nota">Respuesta inmediata</p>
+        </div>
+        <div class="info-card">
+          <span class="info-icono">📍</span>
+          <h3>Ubicación</h3>
+          <p>Av. Luxury 123, Ciudad</p>
+          <p class="info-nota">Visitas con cita previa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario y Mapa -->
+  <section class="formulario-section">
+    <div class="container">
+      <div class="formulario-grid">
+        <!-- Formulario de Contacto -->
+        <div class="formulario-container">
+          <h2>Envíanos un Mensaje</h2>
+          <p class="formulario-intro">
+            Completa el formulario y nos pondremos en contacto contigo lo antes posible.
+          </p>
+          
+          <form (ngSubmit)="enviarFormulario()" class="contacto-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre Completo *</label>
+                <input 
+                  type="text" 
+                  id="nombre" 
+                  [(ngModel)]="formulario.nombre" 
+                  name="nombre"
+                  placeholder="Tu nombre completo"
+                  required>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo Electrónico *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  [(ngModel)]="formulario.email" 
+                  name="email"
+                  placeholder="tu@email.com"
+                  required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input 
+                  type="tel" 
+                  id="telefono" 
+                  [(ngModel)]="formulario.telefono" 
+                  name="telefono"
+                  placeholder="+1 234 567 890">
+              </div>
+              <div class="form-group">
+                <label for="asunto">Asunto *</label>
+                <select 
+                  id="asunto" 
+                  [(ngModel)]="formulario.asunto" 
+                  name="asunto"
+                  required>
+                  <option value="">Selecciona un asunto</option>
+                  @for (asunto of asuntos; track asunto) {
+                    <option [value]="asunto">{{ asunto }}</option>
+                  }
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="mensaje">Mensaje *</label>
+              <textarea 
+                id="mensaje" 
+                [(ngModel)]="formulario.mensaje" 
+                name="mensaje"
+                rows="6"
+                placeholder="¿En qué podemos ayudarte?"
+                required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-button">
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+
+        <!-- Mapa -->
+        <div class="mapa-container">
+          <h2>Nuestra Ubicación</h2>
+          <div class="mapa-placeholder">
+            <span class="mapa-icono">🗺️</span>
+            <p>Av. Luxury 123, Ciudad</p>
+            <p class="mapa-nota">Visitas con cita previa</p>
+          </div>
+          <div class="mapa-info">
+            <h4>Horario de Atención</h4>
+            <p>Lunes - Viernes: 9:00 - 19:00</p>
+            <p>Sábados: 10:00 - 14:00</p>
+            <p>Domingos: Cerrado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Oficinas Section -->
+  <section class="oficinas-section">
+    <div class="container">
+      <h2>Nuestras Oficinas</h2>
+      <div class="oficinas-grid">
+        @for (oficina of oficinas; track oficina.ciudad) {
+          <div class="oficina-card">
+            <h3>{{ oficina.ciudad }}</h3>
+            <div class="oficina-info">
+              <p><span class="oficina-icono">📍</span> {{ oficina.direccion }}</p>
+              <p><span class="oficina-icono">📞</span> {{ oficina.telefono }}</p>
+              <p><span class="oficina-icono">📧</span> {{ oficina.email }}</p>
+              <p><span class="oficina-icono">🕐</span> {{ oficina.horario }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Rápida -->
+  <section class="faq-rapida-section">
+    <div class="container">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-grid">
+        @for (faq of faqs; track faq.pregunta) {
+          <div class="faq-card">
+            <h4>{{ faq.pregunta }}</h4>
+            <p>{{ faq.respuesta }}</p>
+          </div>
+        }
+      </div>
+      <div class="faq-cta">
+        <a routerLink="/preguntas-frecuentes" class="faq-link">Ver todas las preguntas frecuentes →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Redes Sociales -->
+  <section class="redes-section">
+    <div class="container">
+      <h2>Síguenos en Redes Sociales</h2>
+      <p class="redes-intro">Mantente al día con nuestras últimas colecciones y novedades.</p>
+      <div class="redes-grid">
+        <a href="https://facebook.com" target="_blank" class="red-social">
+          <span class="red-icono">📘</span>
+          <span class="red-nombre">Facebook</span>
+          <span class="red-seguidores">50K+ seguidores</span>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="red-social">
+          <span class="red-icono">📷</span>
+          <span class="red-nombre">Instagram</span>
+          <span class="red-seguidores">100K+ seguidores</span>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="red-social">
+          <span class="red-icono">🐦</span>
+          <span class="red-nombre">Twitter</span>
+          <span class="red-seguidores">25K+ seguidores</span>
+        </a>
+        <a href="https://pinterest.com" target="_blank" class="red-social">
+          <span class="red-icono">📌</span>
+          <span class="red-nombre">Pinterest</span>
+          <span class="red-seguidores">75K+ seguidores</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
