@@ -1,16 +1,19 @@
-/* Página Sobre Nosotros - Estilos */
+/* ============================================
+   SOBRE NOSOTROS - DISEÑO DE LUJO MINIMALISTA
+   ============================================ */
+
 .sobre-nosotros-page {
   min-height: 100vh;
-  background-color: var(--color-principal);
+  background-color: var(--color-blanco);
 }
 
-/* Hero Section */
+/* Hero Section - Minimalista */
 .hero-section {
-  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
-  padding: 100px 20px;
+  background: var(--color-blanco);
+  padding: 100px 40px;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  border-bottom: 1px solid var(--color-borde);
 }
 
 .hero-section::before {
@@ -20,42 +23,45 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 50%, rgba(201, 162, 39, 0.03) 0%, transparent 70%);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .hero-content h1 {
-  font-size: 52px;
-  color: var(--color-secundario);
-  margin-bottom: 20px;
-  font-family: 'Georgia', serif;
+  font-family: var(--fuente-titulo);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-texto-principal);
+  margin-bottom: 16px;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .hero-subtitle {
-  font-size: 20px;
-  color: var(--color-texto-claro);
-  font-style: italic;
+  font-size: 1rem;
+  color: var(--color-texto-secundario);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.5px;
 }
 
 /* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 /* Historia Section */
 .historia-section {
-  padding: 80px 20px;
-  background-color: var(--color-apoyo);
+  padding: 80px 40px;
+  background-color: var(--color-fondo-secundario);
 }
 
 .historia-content {
@@ -66,17 +72,20 @@
 }
 
 .historia-texto h2 {
-  font-size: 36px;
-  color: var(--color-secundario);
-  margin-bottom: 30px;
-  font-family: 'Georgia', serif;
+  font-family: var(--fuente-titulo);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-texto-principal);
+  margin-bottom: 24px;
+  letter-spacing: 2px;
 }
 
 .historia-texto p {
-  color: var(--color-texto-claro);
+  color: var(--color-texto-secundario);
   line-height: 1.8;
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  font-weight: 300;
 }
 
 .historia-imagen {
@@ -146,7 +155,8 @@
   font-size: 28px;
   color: var(--color-secundario);
   margin-bottom: 20px;
-  font-family: 'Georgia', serif;
+  font-family: var(--fuente-acento);
+  font-weight: 600;
 }
 
 .mision-card p,
@@ -167,7 +177,8 @@
   font-size: 36px;
   color: var(--color-secundario);
   margin-bottom: 50px;
-  font-family: 'Georgia', serif;
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
 }
 
 .valores-grid {
@@ -200,7 +211,8 @@
   font-size: 20px;
   color: var(--color-secundario);
   margin-bottom: 15px;
-  font-family: 'Georgia', serif;
+  font-family: var(--fuente-acento);
+  font-weight: 600;
 }
 
 .valor-card p {
@@ -220,7 +232,8 @@
   font-size: 36px;
   color: var(--color-secundario);
   margin-bottom: 50px;
-  font-family: 'Georgia', serif;
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
 }
 
 .logros-grid {
@@ -239,11 +252,11 @@
 
 .logro-numero {
   font-size: 48px;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--color-secundario);
   display: block;
   margin-bottom: 10px;
-  font-family: 'Georgia', serif;
+  font-family: var(--fuente-titulo);
 }
 
 .logro-texto {

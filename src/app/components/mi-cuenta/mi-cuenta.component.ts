@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../../services/data.service';
 import { AuthService } from '../../services/auth.service';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-mi-cuenta',
@@ -45,7 +46,8 @@ export class MiCuentaComponent implements OnInit {
   constructor(
     private dataService: DataService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit() {
@@ -95,7 +97,7 @@ export class MiCuentaComponent implements OnInit {
 
   addToCart(producto: any) {
     this.dataService.addToCart(producto);
-    alert(`¡${producto.nombre} agregado al carrito!`);
+    this.notificationService.success(`¡${producto.nombre} agregado al carrito!`);
   }
 
   // ==================== ADDRESSES ====================

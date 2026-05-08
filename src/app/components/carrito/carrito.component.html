@@ -1,12 +1,14 @@
 <div class="carrito">
   <div class="carrito-header">
-    <h1>🛒 Carrito de Compras</h1>
+    <h1>Carrito de Compras</h1>
   </div>
   
   @if (showCheckoutSuccess) {
     <div class="checkout-success">
       <div class="success-content">
-        <span class="success-icon">✅</span>
+        <span class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
         <h2>¡Pedido Realizado!</h2>
         <p>Tu pedido ha sido registrado exitosamente.</p>
         <p>Recibirás un correo de confirmación pronto.</p>
@@ -33,7 +35,9 @@
             </div>
             <div class="item-total">
               <p class="total">${{ formatPrice(calcularTotal(producto)) }}</p>
-              <button class="btn-eliminar" (click)="eliminarProducto(producto)">🗑️</button>
+              <button class="btn-eliminar" (click)="eliminarProducto(producto)">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
             </div>
           </div>
         }
@@ -55,16 +59,24 @@
         </div>
         <button class="btn-checkout" (click)="procederAlPago()">Proceder al Pago</button>
         @if (envio === 0) {
-          <p class="envio-gratis-msg">🚚 ¡Envío gratis aplicado!</p>
+          <p class="envio-gratis-msg">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="envio-icon"><rect x="1" y="3" width="15" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 8h4l3 3v5a2 2 0 01-2 2h-1" stroke="currentColor" stroke-width="2"/><circle cx="5.5" cy="18.5" r="2.5" stroke="currentColor" stroke-width="2"/><circle cx="18.5" cy="18.5" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+            ¡Envío gratis aplicado!
+          </p>
         } @else {
-          <p class="envio-info">🚚 Añade ${{ formatPrice(100000 - subtotal) }} más para envío gratis</p>
+          <p class="envio-info">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="envio-icon"><rect x="1" y="3" width="15" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 8h4l3 3v5a2 2 0 01-2 2h-1" stroke="currentColor" stroke-width="2"/><circle cx="5.5" cy="18.5" r="2.5" stroke="currentColor" stroke-width="2"/><circle cx="18.5" cy="18.5" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+            Añade ${{ formatPrice(100000 - subtotal) }} más para envío gratis
+          </p>
         }
         <a routerLink="/tienda" class="btn-seguir">← Continuar Comprando</a>
       </div>
     </div>
   } @else {
     <div class="carrito-vacio">
-      <div class="vacio-icono">🛒</div>
+      <div class="vacio-icono">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 6h15l-1.5 9h-12L4 4H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></svg>
+      </div>
       <h2>Tu carrito está vacío</h2>
       <p>Parece que aún no has añadido productos a tu carrito.</p>
       <a routerLink="/tienda" class="btn-seguir-tienda">Explorar Productos</a>

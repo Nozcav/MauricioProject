@@ -13,7 +13,7 @@ export class ProductService {
       precio: 299000,
       precioAnterior: 399000,
       imagen: 'assets/img/productos/anillo-esmeralda-trapiche.jpg',
-      badge: '🔥 Más Vendido',
+      badge: 'Más Vendido',
       categoria: 'Anillos',
       material: 'Oro',
       tipo: 'Lujo'
@@ -24,7 +24,7 @@ export class ProductService {
       nombre: 'Anillo Diamante Solitario',
       precio: 245000,
       imagen: 'assets/img/productos/anillo-diamante-solitario.jpg',
-      badge: '⭐ Destacado',
+      badge: 'Destacado',
       categoria: 'Anillos',
       material: 'Oro',
       tipo: 'Lujo'
@@ -36,7 +36,7 @@ export class ProductService {
       precio: 199000,
       precioAnterior: 259000,
       imagen: 'assets/img/productos/anillo-zafiro-celeste.jpg',
-      badge: '❤️ Favorito',
+      badge: 'Favorito',
       categoria: 'Anillos',
       material: 'Plata',
       tipo: 'Elegante'
@@ -47,7 +47,7 @@ export class ProductService {
       nombre: 'Anillo Rubí Colombiano',
       precio: 175000,
       imagen: 'assets/img/productos/anillo-rubi-colombiano.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Anillos',
       material: 'Oro Rosa',
       tipo: 'Romántico'
@@ -58,7 +58,7 @@ export class ProductService {
       nombre: 'Anillo Esmeralda Ovalada',
       precio: 159000,
       imagen: 'assets/img/productos/anillo-esmeralda-ovalada.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Anillos',
       material: 'Oro',
       tipo: 'Clásico'
@@ -69,7 +69,7 @@ export class ProductService {
       nombre: 'Anillo Topacio Imperial',
       precio: 135000,
       imagen: 'assets/img/productos/anillo-topacio-imperial.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Anillos',
       material: 'Plata',
       tipo: 'Moderno'
@@ -83,7 +83,7 @@ export class ProductService {
       precio: 189000,
       precioAnterior: 249000,
       imagen: 'assets/img/productos/collar-esmeralda-cholita.jpg',
-      badge: '⭐ Destacado',
+      badge: 'Destacado',
       categoria: 'Collares',
       material: 'Oro',
       tipo: 'Lujo'
@@ -95,7 +95,7 @@ export class ProductService {
       precio: 165000,
       precioAnterior: 219000,
       imagen: 'assets/img/productos/collar-perlas-del-pacifico.pjg.webp',
-      badge: '❤️ Favorito',
+      badge: 'Favorito',
       categoria: 'Collares',
       material: 'Perlas',
       tipo: 'Elegante'
@@ -106,7 +106,7 @@ export class ProductService {
       nombre: 'Collar Corazón Brillante',
       precio: 129000,
       imagen: 'assets/img/productos/corazon-brillante.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Collares',
       material: 'Oro',
       tipo: 'Romántico'
@@ -117,7 +117,7 @@ export class ProductService {
       nombre: 'Collar Cadena Fina',
       precio: 89000,
       imagen: 'assets/img/productos/collar-cadena-fina.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Collares',
       material: 'Plata',
       tipo: 'Minimalista'
@@ -129,7 +129,7 @@ export class ProductService {
       precio: 145000,
       precioAnterior: 189000,
       imagen: 'assets/img/productos/collar-esmeralda-marquis.pjg.webp',
-      badge: '🏆 Premium',
+      badge: 'Premium',
       categoria: 'Collares',
       material: 'Oro',
       tipo: 'Lujo'
@@ -140,7 +140,7 @@ export class ProductService {
       nombre: 'Collar Lazo de Oro',
       precio: 99000,
       imagen: 'assets/img/productos/collar-lazo-de-oro.pjg.webp',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Collares',
       material: 'Oro',
       tipo: 'Moderno'
@@ -154,7 +154,7 @@ export class ProductService {
       precio: 149000,
       precioAnterior: 199000,
       imagen: 'assets/img/productos/pulsera-brazalete-esmeralda.jpg',
-      badge: '❤️ Favorito',
+      badge: 'Favorito',
       categoria: 'Pulseras',
       material: 'Oro',
       tipo: 'Lujo'
@@ -166,7 +166,7 @@ export class ProductService {
       precio: 289000,
       precioAnterior: 359000,
       imagen: 'assets/img/productos/pulsera-brazalete-torino.jpg',
-      badge: '🏆 Premium',
+      badge: 'Premium',
       categoria: 'Pulseras',
       material: 'Oro',
       tipo: 'Lujo'
@@ -177,7 +177,7 @@ export class ProductService {
       nombre: 'Pulsera Charm Esmeralda',
       precio: 79000,
       imagen: 'assets/img/productos/pulsera.charm-esmerlda.pjg.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Pulseras',
       material: 'Oro Rosa',
       tipo: 'Delicado'
@@ -188,7 +188,7 @@ export class ProductService {
       nombre: 'Pulsera Infinito',
       precio: 95000,
       imagen: 'assets/img/productos/pulsera-infinito.pjg.webp',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Pulseras',
       material: 'Plata',
       tipo: 'Moderno'
@@ -199,7 +199,7 @@ export class ProductService {
       nombre: 'Pulsera Perlas Barroquas',
       precio: 159000,
       imagen: 'assets/img/productos/pulsera-perlas-barroquas.pjg.webp',
-      badge: '⭐ Destacado',
+      badge: 'Destacado',
       categoria: 'Pulseras',
       material: 'Perlas',
       tipo: 'Elegante'
@@ -210,7 +210,7 @@ export class ProductService {
       nombre: 'Pulsera Cuero Artesanal',
       precio: 65000,
       imagen: 'assets/img/productos/pulsera-cuero-artesanal.pjg.webp',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Pulseras',
       material: 'Cuero',
       tipo: 'Casual'
@@ -223,7 +223,7 @@ export class ProductService {
       nombre: 'Aretes Esmeralda Drops',
       precio: 79000,
       imagen: 'assets/img/productos/aretes-esmeralda-drop.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Aretes',
       material: 'Oro',
       tipo: 'Lujo'
@@ -235,7 +235,7 @@ export class ProductService {
       precio: 119000,
       precioAnterior: 159000,
       imagen: 'assets/img/productos/aretes-argolla-colombiana.pjg.webp',
-      badge: '🔥 Más Vendido',
+      badge: 'Más Vendido',
       categoria: 'Aretes',
       material: 'Oro',
       tipo: 'Clásico'
@@ -246,7 +246,7 @@ export class ProductService {
       nombre: 'Aretes Perla Graduada',
       precio: 99000,
       imagen: 'assets/img/productos/aretes-perla-graduada.pjg.webp',
-      badge: '⭐ Destacado',
+      badge: 'Destacado',
       categoria: 'Aretes',
       material: 'Perlas',
       tipo: 'Elegante'
@@ -258,7 +258,7 @@ export class ProductService {
       precio: 189000,
       precioAnterior: 249000,
       imagen: 'assets/img/productos/aretes-diamante-fino.pjg.png',
-      badge: '🏆 Premium',
+      badge: 'Premium',
       categoria: 'Aretes',
       material: 'Oro',
       tipo: 'Lujo'
@@ -269,7 +269,7 @@ export class ProductService {
       nombre: 'Aretes Lazo Rosa',
       precio: 55000,
       imagen: 'assets/img/productos/aretes-lazo-rosa.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Aretes',
       material: 'Oro Rosa',
       tipo: 'Delicado'
@@ -280,7 +280,7 @@ export class ProductService {
       nombre: 'Aretes Chandelier',
       precio: 45000,
       imagen: 'assets/img/productos/aretes-chandelier.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Aretes',
       material: 'Plata',
       tipo: 'Elegante'
@@ -294,7 +294,7 @@ export class ProductService {
       precio: 459000,
       precioAnterior: 599000,
       imagen: 'assets/img/productos/reloj-luxury-colombiano.jpg',
-      badge: '🏆 Premium',
+      badge: 'Premium',
       categoria: 'Relojes',
       material: 'Acero',
       tipo: 'Lujo'
@@ -306,7 +306,7 @@ export class ProductService {
       precio: 289000,
       precioAnterior: 349000,
       imagen: 'assets/img/productos/reloj-rose-dame-dame.jpg',
-      badge: '❤️ Favorito',
+      badge: 'Favorito',
       categoria: 'Relojes',
       material: 'Oro Rosa',
       tipo: 'Elegante'
@@ -317,7 +317,7 @@ export class ProductService {
       nombre: 'Reloj Minimalista',
       precio: 199000,
       imagen: 'assets/img/productos/reloj-minimalista.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Relojes',
       material: 'Cuero',
       tipo: 'Moderno'
@@ -328,7 +328,7 @@ export class ProductService {
       nombre: 'Reloj Inteligente Pro',
       precio: 329000,
       imagen: 'assets/img/productos/reloj-inteligente-pro.jpg',
-      badge: '🏆 Premium',
+      badge: 'Premium',
       categoria: 'Relojes',
       material: 'Acero',
       tipo: 'Moderno'
@@ -339,7 +339,7 @@ export class ProductService {
       nombre: 'Reloj Clásico Dama',
       precio: 245000,
       imagen: 'assets/img/productos/reloj-clasico-dama.pjg.webp',
-      badge: '⭐ Destacado',
+      badge: 'Destacado',
       categoria: 'Relojes',
       material: 'Oro',
       tipo: 'Clásico'
@@ -352,7 +352,7 @@ export class ProductService {
       nombre: 'Dije Esmeralda Corazón',
       precio: 55000,
       imagen: 'assets/img/productos/dije-esmeralda-corazon.pjg.webp',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Dijes',
       material: 'Oro',
       tipo: 'Romántico'
@@ -363,7 +363,7 @@ export class ProductService {
       nombre: 'Dije Cruz Esmeralda',
       precio: 45000,
       imagen: 'assets/img/productos/dije-cruz-esmeralda.jpg',
-      badge: '❤️ Favorito',
+      badge: 'Favorito',
       categoria: 'Dijes',
       material: 'Oro',
       tipo: 'Elegante'
@@ -374,7 +374,7 @@ export class ProductService {
       nombre: 'Dije Corazón Piedra',
       precio: 65000,
       imagen: 'assets/img/productos/dije-corazon-piedra.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Dijes',
       material: 'Plata',
       tipo: 'Romántico'
@@ -385,7 +385,7 @@ export class ProductService {
       nombre: 'Dije Estrella Luna',
       precio: 39000,
       imagen: 'assets/img/productos/dije-estrella-luna.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Dijes',
       material: 'Plata',
       tipo: 'Moderno'
@@ -396,7 +396,7 @@ export class ProductService {
       nombre: 'Dije Infinito Rosa',
       precio: 49000,
       imagen: 'assets/img/productos/dije-infinito-rosa.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Dijes',
       material: 'Oro Rosa',
       tipo: 'Delicado'
@@ -409,7 +409,7 @@ export class ProductService {
       nombre: 'Charm Esmeralda Mina',
       precio: 45000,
       imagen: 'assets/img/productos/charm-esmeralda-mina.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Charms',
       material: 'Oro',
       tipo: 'Lujo'
@@ -420,7 +420,7 @@ export class ProductService {
       nombre: 'Charm Flor Loto',
       precio: 35000,
       imagen: 'assets/img/productos/charm-flor-loto.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Charms',
       material: 'Plata',
       tipo: 'Delicado'
@@ -431,7 +431,7 @@ export class ProductService {
       nombre: 'Charm Corona Real',
       precio: 55000,
       imagen: 'assets/img/productos/charm-corona-real.pjg.webp',
-      badge: '🏆 Premium',
+      badge: 'Premium',
       categoria: 'Charms',
       material: 'Oro',
       tipo: 'Lujo'
@@ -442,7 +442,7 @@ export class ProductService {
       nombre: 'Charm Mariposa',
       precio: 39000,
       imagen: 'assets/img/productos/charm-mariposa.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Charms',
       material: 'Oro Rosa',
       tipo: 'Romántico'
@@ -453,7 +453,7 @@ export class ProductService {
       nombre: 'Charm Corazón',
       precio: 42000,
       imagen: 'assets/img/productos/charm-corazon.jpg',
-      badge: '❤️ Favorito',
+      badge: 'Favorito',
       categoria: 'Charms',
       material: 'Plata',
       tipo: 'Romántico'
@@ -466,7 +466,7 @@ export class ProductService {
       nombre: 'Set Esmeralda Novia',
       precio: 389000,
       imagen: 'assets/img/productos/set-esmeralda-novia.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Sets',
       material: 'Oro',
       tipo: 'Lujo'
@@ -478,7 +478,7 @@ export class ProductService {
       precio: 249000,
       precioAnterior: 319000,
       imagen: 'assets/img/productos/set-perla-graduada.jpg',
-      badge: '⭐ Destacado',
+      badge: 'Destacado',
       categoria: 'Sets',
       material: 'Perlas',
       tipo: 'Elegante'
@@ -489,7 +489,7 @@ export class ProductService {
       nombre: 'Set Diamante Princess',
       precio: 299000,
       imagen: 'assets/img/productos/set-diamante-princess.jpg',
-      badge: '🔥 Más Vendido',
+      badge: 'Más Vendido',
       categoria: 'Sets',
       material: 'Oro',
       tipo: 'Lujo'
@@ -500,7 +500,7 @@ export class ProductService {
       nombre: 'Set Cadena Bohemia',
       precio: 159000,
       imagen: 'assets/img/productos/set-cadena-bohemia.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Sets',
       material: 'Plata',
       tipo: 'Moderno'
@@ -511,7 +511,7 @@ export class ProductService {
       nombre: 'Set Pulsera Rosa',
       precio: 179000,
       imagen: 'assets/img/productos/set-pulsera-rosa.jpg',
-      badge: '✨ Nuevo',
+      badge: 'Nuevo',
       categoria: 'Sets',
       material: 'Oro Rosa',
       tipo: 'Romántico'

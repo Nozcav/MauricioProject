@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../../services/data.service';
 import { ProductService } from '../../services/product.service';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-tienda',
@@ -37,7 +38,8 @@ export class TiendaComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private dataService: DataService,
-    private productService: ProductService
+    private productService: ProductService,
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit() {
@@ -126,7 +128,7 @@ export class TiendaComponent implements OnInit {
   addToCart(producto: any, event: Event): void {
     event.stopPropagation();
     this.dataService.addToCart(producto);
-    alert('Producto agregado al carrito');
+    this.notificationService.success(`¡${producto.nombre} agregado al carrito!`);
   }
 
   toggleFavorite(producto: any, event: Event): void {

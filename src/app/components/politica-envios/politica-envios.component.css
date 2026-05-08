@@ -1,8 +1,8 @@
 /* ============================================
-   POLÍTICAS DE DEVOLUCIÓN - DISEÑO DE LUJO MINIMALISTA
+   POLÍTICA DE ENVÍOS - DISEÑO DE LUJO MINIMALISTA
    ============================================ */
 
-.politicas-page {
+.envios-page {
   min-height: 100vh;
   background-color: var(--color-blanco);
 }
@@ -23,11 +23,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(201, 162, 39, 0.03) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle at 50% 50%, rgba(201, 162, 39, 0.03) 0%, transparent 70%);
 }
 
 .hero-content {
@@ -49,7 +45,7 @@
 
 .hero-subtitle {
   font-size: 1rem;
-  color: #111111;
+  color: var(--color-texto-secundario);
   font-weight: 300;
   font-style: normal;
   letter-spacing: 0.5px;
@@ -62,58 +58,59 @@
   padding: 0 40px;
 }
 
-/* Resumen Section */
-.resumen-section {
+/* Beneficios Rápidos Section */
+.beneficios-rapidos {
   padding: 60px 40px;
   background-color: var(--color-fondo-secundario);
 }
 
-.resumen-grid {
+.beneficios-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 30px;
 }
 
-.resumen-item {
-  background: var(--color-blanco);
-  border: 1px solid var(--color-borde);
-  border-radius: 2px;
-  padding: 35px 24px;
+.beneficio-item {
   text-align: center;
+  padding: 25px;
+  background: var(--color-blanco);
+  border-radius: 12px;
+  border: 1px solid var(--color-borde);
   transition: all 0.3s ease;
 }
 
-.resumen-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--sombra-media);
+.beneficio-item:hover {
+  transform: translateY(-5px);
   border-color: var(--color-dorado);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.1);
 }
 
-.resumen-icono {
-  font-size: 50px;
+.beneficio-icono {
+  font-size: 45px;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.resumen-item h3 {
-  font-size: 24px;
+.beneficio-item h3 {
+  font-size: 18px;
   color: var(--color-secundario);
   margin-bottom: 10px;
   font-family: 'Georgia', serif;
 }
 
-.resumen-item p {
-  color: #111111;
-  font-size: 15px;
+.beneficio-item p {
+  color: var(--color-texto-secundario);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-/* Políticas Detalladas Section */
-.politicas-detalladas-section {
+/* Opciones Section */
+.opciones-section {
   padding: 80px 20px;
   background-color: var(--color-principal);
 }
 
-.politicas-detalladas-section h2 {
+.opciones-section h2 {
   text-align: center;
   font-size: 36px;
   color: var(--color-secundario);
@@ -121,73 +118,98 @@
   font-family: 'Georgia', serif;
 }
 
-.politicas-grid {
+.opciones-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
-.politica-card {
-  background: linear-gradient(
-    135deg,
-    var(--color-principal) 0%,
-    var(--color-apoyo) 100%
-  );
-  padding: 35px;
+.opcion-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 40px;
   border-radius: 15px;
   border: 1px solid rgba(212, 175, 55, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.politica-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+.opcion-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
 }
 
-.politica-header {
+.opcion-header {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-.politica-icono {
-  font-size: 40px;
+.opcion-icono {
+  font-size: 50px;
 }
 
-.politica-header h3 {
-  font-size: 24px;
+.opcion-header h3 {
+  font-size: 26px;
   color: var(--color-secundario);
   font-family: 'Georgia', serif;
 }
 
-.politica-descripcion {
-  color: #111111;
-  font-size: 16px;
+.opcion-info {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
   margin-bottom: 20px;
-  line-height: 1.6;
 }
 
-.politica-detalles {
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  color: var(--color-apoyo);
+  font-weight: 600;
+}
+
+.info-valor {
+  color: var(--color-secundario);
+  font-weight: bold;
+}
+
+.opcion-descripcion {
+  color: var(--color-texto-claro);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.opcion-detalles {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.politica-detalles li {
-  color: #111111;
+.opcion-detalles li {
+  color: var(--color-texto-claro);
   font-size: 14px;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
   padding-left: 25px;
   position: relative;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
-.politica-detalles li:last-child {
+.opcion-detalles li:last-child {
   border-bottom: none;
 }
 
-.politica-detalles li::before {
+.opcion-detalles li::before {
   content: '✓';
   position: absolute;
   left: 0;
@@ -195,32 +217,35 @@
   font-weight: bold;
 }
 
-/* Garantías Section */
-.garantias-section {
+/* Cobertura Section */
+.cobertura-section {
   padding: 80px 20px;
   background-color: var(--color-apoyo);
 }
 
-.garantias-section h2 {
+.cobertura-section h2 {
   text-align: center;
   font-size: 36px;
   color: var(--color-secundario);
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   font-family: 'Georgia', serif;
 }
 
-.garantias-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+.cobertura-intro {
+  text-align: center;
+  color: var(--color-texto-claro);
+  font-size: 16px;
+  margin-bottom: 50px;
 }
 
-.garantia-card {
-  background: linear-gradient(
-    135deg,
-    var(--color-principal) 0%,
-    var(--color-apoyo) 100%
-  );
+.cobertura-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.zona-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
   padding: 35px 25px;
   border-radius: 15px;
   text-align: center;
@@ -228,101 +253,103 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.garantia-card:hover {
+.zona-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
 }
 
-.garantia-icono {
-  font-size: 50px;
+.zona-icono {
+  font-size: 45px;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.garantia-card h3 {
+.zona-card h3 {
   font-size: 20px;
   color: var(--color-secundario);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-family: 'Georgia', serif;
 }
 
-.garantia-card p {
-  color: #111111;
-  line-height: 1.6;
-  font-size: 14px;
+.zona-info {
+  text-align: left;
 }
 
-/* Proceso Section */
-.proceso-section {
+.zona-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  font-size: 13px;
+}
+
+.zona-item:last-child {
+  border-bottom: none;
+}
+
+.zona-label {
+  color: var(--color-apoyo);
+  font-weight: 600;
+}
+
+.zona-valor {
+  color: var(--color-texto-claro);
+  font-weight: 500;
+}
+
+/* Información Section */
+.informacion-section {
   padding: 80px 20px;
   background-color: var(--color-principal);
 }
 
-.proceso-section h2 {
-  text-align: center;
-  font-size: 36px;
-  color: var(--color-secundario);
-  margin-bottom: 50px;
-  font-family: 'Georgia', serif;
-}
-
-.proceso-pasos {
-  display: flex;
-  flex-direction: column;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
-.paso-item {
-  display: flex;
-  gap: 25px;
-  align-items: flex-start;
-  background: linear-gradient(
-    135deg,
-    var(--color-principal) 0%,
-    var(--color-apoyo) 100%
-  );
-  padding: 30px;
+.info-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  padding: 35px;
   border-radius: 15px;
   border: 1px solid rgba(212, 175, 55, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.paso-item:hover {
-  transform: translateX(10px);
+.info-card:hover {
+  transform: translateY(-5px);
   box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
 }
 
-.paso-numero {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(
-    135deg,
-    var(--color-secundario) 0%,
-    var(--color-acento-dorado) 100%
-  );
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--color-principal);
-  flex-shrink: 0;
-}
-
-.paso-contenido h3 {
-  font-size: 20px;
+.info-card h3 {
+  font-size: 22px;
   color: var(--color-secundario);
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   font-family: 'Georgia', serif;
 }
 
-.paso-contenido p {
-  color: #111111;
-  line-height: 1.6;
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  color: var(--color-texto-claro);
   font-size: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  line-height: 1.6;
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
+
+.info-list strong {
+  color: var(--color-secundario);
 }
 
 /* FAQ Section */
@@ -340,7 +367,7 @@
 }
 
 .faq-lista {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -348,11 +375,7 @@
 }
 
 .faq-item {
-  background: linear-gradient(
-    135deg,
-    var(--color-principal) 0%,
-    var(--color-apoyo) 100%
-  );
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
   border-radius: 12px;
   border: 1px solid rgba(212, 175, 55, 0.2);
   overflow: hidden;
@@ -382,7 +405,7 @@
 
 .faq-header h3 {
   font-size: 17px;
-  color: #111111;
+  color: var(--color-texto-claro);
   font-weight: 500;
   margin: 0;
   flex: 1;
@@ -406,7 +429,6 @@
     opacity: 0;
     transform: translateY(-10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -414,19 +436,19 @@
 }
 
 .faq-respuesta p {
-  color: #111111;
+  color: var(--color-texto-claro);
   line-height: 1.7;
   font-size: 15px;
   margin: 0;
 }
 
-/* Contacto Section */
-.contacto-section {
+/* Contacto Final Section */
+.contacto-final-section {
   padding: 80px 20px;
   background-color: var(--color-principal);
 }
 
-.contacto-section h2 {
+.contacto-final-section h2 {
   text-align: center;
   font-size: 36px;
   color: var(--color-secundario);
@@ -434,26 +456,22 @@
   font-family: 'Georgia', serif;
 }
 
-.contacto-intro {
+.contacto-final-intro {
   text-align: center;
-  color: #111111;
+  color: var(--color-texto-claro);
   font-size: 18px;
   margin-bottom: 50px;
 }
 
-.contacto-grid {
+.contacto-final-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 40px;
 }
 
-.contacto-card {
-  background: linear-gradient(
-    135deg,
-    var(--color-principal) 0%,
-    var(--color-apoyo) 100%
-  );
+.contacto-final-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
   padding: 35px 25px;
   border-radius: 15px;
   text-align: center;
@@ -461,47 +479,44 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contacto-card:hover {
+.contacto-final-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
 }
 
-.contacto-icono {
+.contacto-final-icono {
   font-size: 45px;
   display: block;
   margin-bottom: 20px;
 }
 
-.contacto-card h3 {
+.contacto-final-card h3 {
   font-size: 20px;
   color: var(--color-secundario);
   margin-bottom: 10px;
   font-family: 'Georgia', serif;
 }
 
-.contacto-card p {
-  color: #111111;
+.contacto-final-card p {
+  color: var(--color-texto-claro);
   font-size: 15px;
   margin-bottom: 8px;
 }
 
-.contacto-nota {
-  color: #111111;
+.contacto-final-nota {
+  color: var(--color-apoyo);
   font-size: 13px;
   font-style: italic;
+  margin-bottom: 0 !important;
 }
 
-.contacto-cta {
+.contacto-final-cta {
   text-align: center;
 }
 
-.contacto-button {
+.contacto-final-button {
   display: inline-block;
-  background: linear-gradient(
-    135deg,
-    var(--color-secundario) 0%,
-    var(--color-acento-dorado) 100%
-  );
+  background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-acento-dorado) 100%);
   color: var(--color-principal);
   padding: 15px 40px;
   border-radius: 30px;
@@ -511,18 +526,18 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contacto-button:hover {
+.contacto-final-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
 }
 
-/* Documentos Section */
-.documentos-section {
+/* Políticas Relacionadas Section */
+.politicas-relacionadas-section {
   padding: 80px 20px;
   background-color: var(--color-apoyo);
 }
 
-.documentos-section h2 {
+.politicas-relacionadas-section h2 {
   text-align: center;
   font-size: 36px;
   color: var(--color-secundario);
@@ -530,18 +545,16 @@
   font-family: 'Georgia', serif;
 }
 
-.documentos-grid {
+.politicas-relacionadas-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.documento-card {
-  background: linear-gradient(
-    135deg,
-    var(--color-principal) 0%,
-    var(--color-apoyo) 100%
-  );
+.politica-relacionada-card {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
   padding: 35px 25px;
   border-radius: 15px;
   text-align: center;
@@ -549,32 +562,32 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.documento-card:hover {
+.politica-relacionada-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
 }
 
-.documento-icono {
+.politica-relacionada-icono {
   font-size: 50px;
   display: block;
   margin-bottom: 20px;
 }
 
-.documento-card h3 {
+.politica-relacionada-card h3 {
   font-size: 20px;
   color: var(--color-secundario);
   margin-bottom: 15px;
   font-family: 'Georgia', serif;
 }
 
-.documento-card p {
-  color: #111111;
+.politica-relacionada-card p {
+  color: var(--color-texto-claro);
   line-height: 1.6;
   font-size: 14px;
   margin-bottom: 20px;
 }
 
-.documento-link {
+.politica-relacionada-link {
   color: var(--color-secundario);
   text-decoration: none;
   font-size: 14px;
@@ -582,25 +595,35 @@
   transition: color 0.3s ease;
 }
 
-.documento-link:hover {
+.politica-relacionada-link:hover {
   color: var(--color-acento-dorado);
   text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .resumen-grid,
-  .garantias-grid,
-  .contacto-grid {
+  .beneficios-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .politicas-grid {
+  
+  .opciones-grid {
     grid-template-columns: 1fr;
   }
-
-  .documentos-grid {
+  
+  .cobertura-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contacto-final-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .politicas-relacionadas-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -608,20 +631,24 @@
   .hero-content h1 {
     font-size: 36px;
   }
-
-  .resumen-grid,
-  .garantias-grid,
-  .contacto-grid,
-  .documentos-grid {
+  
+  .beneficios-grid,
+  .cobertura-grid,
+  .info-grid,
+  .contacto-final-grid,
+  .politicas-relacionadas-grid {
     grid-template-columns: 1fr;
   }
-
-  .paso-item {
-    flex-direction: column;
-    text-align: center;
+  
+  .beneficio-item {
+    padding: 20px 15px;
   }
-
-  .paso-numero {
-    margin: 0 auto;
+  
+  .opcion-card {
+    padding: 25px;
+  }
+  
+  .zona-card {
+    padding: 25px 15px;
   }
 }

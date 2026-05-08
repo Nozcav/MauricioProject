@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-preguntas-frecuentes',
@@ -9,10 +10,16 @@ import { RouterLink } from '@angular/router';
   styleUrl: './preguntas-frecuentes.component.css'
 })
 export class PreguntasFrecuentesComponent {
+  constructor(private sanitizer: DomSanitizer) {}
+
+  sanitizeHtml(html: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
+
   categorias = [
     {
       nombre: 'Compras y Pedidos',
-      icono: '🛒',
+      icono: '<svg class="icon-lucide" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>',
       preguntas: [
         {
           pregunta: '¿Cómo puedo realizar un pedido?',
@@ -38,7 +45,7 @@ export class PreguntasFrecuentesComponent {
     },
     {
       nombre: 'Envíos y Entregas',
-      icono: '📦',
+      icono: '<svg class="icon-lucide" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>',
       preguntas: [
         {
           pregunta: '¿Cuál es el tiempo de entrega?',
@@ -64,7 +71,7 @@ export class PreguntasFrecuentesComponent {
     },
     {
       nombre: 'Productos y Calidad',
-      icono: '💎',
+      icono: '<svg class="icon-lucide" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13"/><path d="M13 3l3 6-4 13"/><path d="M2 9h20"/></svg>',
       preguntas: [
         {
           pregunta: '¿Sus joyas son de material genuino?',
@@ -90,7 +97,7 @@ export class PreguntasFrecuentesComponent {
     },
     {
       nombre: 'Devoluciones y Cambios',
-      icono: '🔄',
+      icono: '<svg class="icon-lucide" viewBox="0 0 24 24"><path d="M3 12a9 9 0 109-9 9.75 9.75 0 00-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>',
       preguntas: [
         {
           pregunta: '¿Cuál es su política de devoluciones?',
@@ -116,7 +123,7 @@ export class PreguntasFrecuentesComponent {
     },
     {
       nombre: 'Cuenta y Seguridad',
-      icono: '🔒',
+      icono: '<svg class="icon-lucide" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>',
       preguntas: [
         {
           pregunta: '¿Necesito crear una cuenta para comprar?',

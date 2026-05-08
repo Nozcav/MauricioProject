@@ -1,0 +1,208 @@
+<!-- Página de Política de Envíos -->
+<div class="envios-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Política de Envíos</h1>
+      <p class="hero-subtitle">Entrega rápida, segura y confiable. Conoce todas nuestras opciones de envío.</p>
+    </div>
+  </section>
+
+  <!-- Beneficios Quick -->
+  <section class="beneficios-rapidos">
+    <div class="container">
+      <div class="beneficios-grid">
+        @for (beneficio of beneficios; track beneficio.titulo) {
+          <div class="beneficio-item">
+          <span class="beneficio-icono" [innerHTML]="sanitizeHtml(beneficio.icono)"></span>
+            <h3>{{ beneficio.titulo }}</h3>
+            <p>{{ beneficio.descripcion }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Opciones de Envío -->
+  <section class="opciones-section">
+    <div class="container">
+      <h2>Opciones de Envío</h2>
+      <div class="opciones-grid">
+        @for (opcion of opciones_envio; track opcion.nombre) {
+          <div class="opcion-card">
+            <div class="opcion-header">
+              <span class="opcion-icono" [innerHTML]="sanitizeHtml(opcion.icono)"></span>
+              <h3>{{ opcion.nombre }}</h3>
+            </div>
+            <div class="opcion-info">
+              <div class="info-item">
+                <span class="info-label">Tiempo:</span>
+                <span class="info-valor">{{ opcion.tiempo }}</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Costo:</span>
+                <span class="info-valor">{{ opcion.costo }}</span>
+              </div>
+            </div>
+            <p class="opcion-descripcion">{{ opcion.descripcion }}</p>
+            <ul class="opcion-detalles">
+              @for (detalle of opcion.detalles; track detalle) {
+                <li>{{ detalle }}</li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Cobertura por Zonas -->
+  <section class="cobertura-section">
+    <div class="container">
+      <h2>Cobertura por Zonas</h2>
+      <p class="cobertura-intro">Consulta los tiempos y costos de envío según tu zona geográfica.</p>
+      
+      <div class="cobertura-grid">
+        @for (zona of cobertura_zonas; track zona.zona) {
+          <div class="zona-card">
+            <span class="zona-icono" [innerHTML]="sanitizeHtml(zona.icono)"></span>
+            <h3>{{ zona.zona }}</h3>
+            <div class="zona-info">
+              <div class="zona-item">
+                <span class="zona-label">Envío Estándar:</span>
+                <span class="zona-valor">{{ zona.tiempo_std }}</span>
+              </div>
+              <div class="zona-item">
+                <span class="zona-label">Envío Express:</span>
+                <span class="zona-valor">{{ zona.tiempo_express }}</span>
+              </div>
+              <div class="zona-item">
+                <span class="zona-label">Costo:</span>
+                <span class="zona-valor">{{ zona.costo }}</span>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Información de Envío -->
+  <section class="informacion-section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Proceso de Envío</h3>
+          <ol class="info-list">
+            <li><strong>Confirmación:</strong> Recibes confirmación de tu pedido por email</li>
+            <li><strong>Preparación:</strong> Tu pedido se prepara en 24-48 horas</li>
+            <li><strong>Envío:</strong> Recibido número de seguimiento</li>
+            <li><strong>Tránsito:</strong> Rastreo en tiempo real</li>
+            <li><strong>Entrega:</strong> Recepción y confirmación</li>
+          </ol>
+        </div>
+        
+        <div class="info-card">
+          <h3>Métodos de Entrega</h3>
+          <ul class="info-list">
+            <li>🏠 Entrega en domicilio</li>
+            <li>📦 Punto de retiro</li>
+            <li>✉️ Apartado postal</li>
+            <li>🏢 Entrega empresarial</li>
+            <li>🌍 Envío internacional</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>Recomendaciones</h3>
+          <ul class="info-list">
+            <li>✓ Verifica tu dirección antes de confirmar</li>
+            <li>✓ Mantén disponible el número de seguimiento</li>
+            <li>✓ Ten documento de identidad al recibir</li>
+            <li>✓ Verifica el paquete antes de firmar</li>
+            <li>✓ Guarda el comprobante de entrega</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Preguntas Frecuentes sobre Envíos</h2>
+      <div class="faq-lista">
+        @for (faq of preguntasFrecuentes; track faq.pregunta; let i = $index) {
+          <div class="faq-item" [class.abierta]="faq.abierta">
+            <div class="faq-header" (click)="togglePregunta(i)">
+              <h3>{{ faq.pregunta }}</h3>
+              <span class="faq-icono">{{ faq.abierta ? '−' : '+' }}</span>
+            </div>
+            @if (faq.abierta) {
+              <div class="faq-respuesta">
+                <p>{{ faq.respuesta }}</p>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Contacto -->
+  <section class="contacto-final-section">
+    <div class="container">
+      <h2>¿Preguntas sobre Envíos?</h2>
+      <p class="contacto-final-intro">Nuestro equipo está listo para ayudarte con cualquier consulta.</p>
+      
+      <div class="contacto-final-grid">
+        <div class="contacto-final-card">
+          <span class="contacto-final-icono"><svg class="icon-lucide" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg></span>
+          <h3>Email</h3>
+          <p>hola&#64;luxejoyas.com</p>
+          <p class="contacto-final-nota">Respuesta en 24 horas</p>
+        </div>
+        
+        <div class="contacto-final-card">
+          <span class="contacto-final-icono"><svg class="icon-lucide" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></span>
+          <h3>Teléfono</h3>
+          <p>+1 234 567 890</p>
+          <p class="contacto-final-nota">Lun - Vie: 9:00 - 19:00</p>
+        </div>
+
+        <div class="contacto-final-card">
+          <span class="contacto-final-icono"><svg class="icon-lucide" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>
+          <h3>WhatsApp</h3>
+          <p>+1 234 567 890</p>
+          <p class="contacto-final-nota">Respuesta inmediata</p>
+        </div>
+      </div>
+      
+      <div class="contacto-final-cta">
+        <a routerLink="/contacto" class="contacto-final-button">Contactar Ventas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Políticas Relacionadas -->
+  <section class="politicas-relacionadas-section">
+    <div class="container">
+      <h2>Políticas Relacionadas</h2>
+      <div class="politicas-relacionadas-grid">
+        <div class="politica-relacionada-card">
+          <span class="politica-relacionada-icono"><svg class="icon-lucide" viewBox="0 0 24 24"><path d="M3 12a9 9 0 109-9 9.75 9.75 0 00-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span>
+          <h3>Política de Devoluciones</h3>
+          <p>30 días para devoluciones. Conoce los términos y condiciones completos.</p>
+          <a routerLink="/politicas-devolucion" class="politica-relacionada-link">Leer más →</a>
+        </div>
+        
+        <div class="politica-relacionada-card">
+          <span class="politica-relacionada-icono"><svg class="icon-lucide" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span>
+          <h3>Preguntas Frecuentes</h3>
+          <p>Encuentra respuestas a las preguntas más comunes sobre nuestros servicios.</p>
+          <a routerLink="/preguntas-frecuentes" class="politica-relacionada-link">Leer más →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

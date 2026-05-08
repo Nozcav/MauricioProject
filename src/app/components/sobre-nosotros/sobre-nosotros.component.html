@@ -32,7 +32,7 @@
         </div>
         <div class="historia-imagen">
           <div class="imagen-placeholder">
-            <span class="icono-grande">💎</span>
+            <span class="icono-grande"><svg class="icon-lucide" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13"/><path d="M13 3l3 6-4 13"/><path d="M2 9h20"/></svg></span>
             <p>Desde 2011</p>
           </div>
         </div>
@@ -45,7 +45,7 @@
     <div class="container">
       <div class="mision-vision-grid">
         <div class="mision-card">
-          <div class="card-icono">🎯</div>
+          <div class="card-icono"><svg class="icon-lucide" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
           <h3>Nuestra Misión</h3>
           <p>
             Crear joyas excepcionales que celebren los momentos más especiales de la vida, 
@@ -54,7 +54,7 @@
           </p>
         </div>
         <div class="vision-card">
-          <div class="card-icono">👁️</div>
+          <div class="card-icono"><svg class="icon-lucide" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
           <h3>Nuestra Visión</h3>
           <p>
             Ser reconocidos como la marca líder en joyería de lujo en América Latina, 
@@ -73,7 +73,7 @@
       <div class="valores-grid">
         @for (valor of valores; track valor.titulo) {
           <div class="valor-card">
-            <span class="valor-icono">{{ valor.icono }}</span>
+            <span class="valor-icono" [innerHTML]="valor.icono"></span>
             <h4>{{ valor.titulo }}</h4>
             <p>{{ valor.descripcion }}</p>
           </div>
@@ -107,7 +107,7 @@
       <div class="equipo-grid">
         @for (miembro of equipo; track miembro.nombre) {
           <div class="equipo-card">
-            <div class="equipo-imagen">{{ miembro.imagen }}</div>
+            <div class="equipo-imagen" [innerHTML]="miembro.imagen"></div>
             <h4>{{ miembro.nombre }}</h4>
             <span class="equipo-cargo">{{ miembro.cargo }}</span>
             <p>{{ miembro.descripcion }}</p>

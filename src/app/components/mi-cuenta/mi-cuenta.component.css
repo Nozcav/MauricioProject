@@ -1,7 +1,11 @@
+/* ============================================
+   MI CUENTA - DISEÑO DE LUJO MINIMALISTA
+   ============================================ */
+
 .mi-cuenta {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 60px 40px;
   background-color: var(--color-fondo-principal);
 }
 
@@ -10,75 +14,89 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .cuenta-header-text {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
 }
 
 .header-icono {
-  width: 62px;
-  height: 62px;
+  width: 44px;
+  height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-secundario), var(--color-acento-dorado));
-  border-radius: 18px;
-  color: var(--color-texto-claro);
+
+  background: #ffffff;
+  color: #C9A14A; /* dorado elegante */
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 50%; /* círculo más premium */
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
 }
 
 .header-icono svg {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
 }
 
 .cuenta-header h1 {
-  font-size: 2rem;
+  font-family: var(--fuente-titulo);
+  font-size: 1.8rem;
+  font-weight: 600;
   color: var(--color-texto-principal);
   margin: 0;
+  letter-spacing: 2px;
 }
 
 .cuenta-header p {
   color: var(--color-texto-secundario);
-  font-size: 1rem;
-  margin: 0;
+  font-size: 0.9rem;
+  margin: 4px 0 0;
+  font-weight: 400;
 }
 
 .btn-logout {
-  padding: 12px 20px;
+  padding: 12px 24px;
   background: transparent;
   color: var(--color-texto-principal);
-  border: 2px solid var(--color-borde-oscuro);
-  border-radius: 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 2px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   transition: all 0.3s ease;
 }
 
 .btn-logout:hover {
-  background: var(--color-secundario);
-  color: var(--color-texto-claro);
-  border-color: transparent;
+  background: var(--color-negro);
+  color: var(--color-dorado);
+  border-color: var(--color-negro);
 }
 
 /* Layout */
 .cuenta-layout {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   align-items: flex-start;
 }
 
 /* Sidebar */
 .cuenta-sidebar {
-  width: 280px;
-  min-width: 280px;
-  background: var(--color-fondo-claro);
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  width: 260px;
+  min-width: 260px;
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 2px;
+  padding: 24px;
   position: sticky;
   top: 100px;
 }
@@ -87,16 +105,17 @@
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
+  gap: 10px;
+  padding: 12px 14px;
   background: transparent;
   border: none;
-  border-radius: 10px;
-  font-size: 0.95rem;
+  border-radius: 2px;
+  font-size: 0.85rem;
   color: var(--color-texto-secundario);
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: left;
+  font-weight: 400;
   margin-bottom: 4px;
 }
 
@@ -107,7 +126,7 @@
 
 .sidebar-item.active {
   background: linear-gradient(135deg, var(--color-secundario), var(--color-acento-dorado));
-  color: var(--color-texto-claro);
+  color: black;
   font-weight: 500;
 }
 
@@ -123,6 +142,17 @@
 .item-icono svg {
   width: 22px;
   height: 22px;
+}
+
+.sidebar-text {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: inherit;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Contenido */
@@ -539,7 +569,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-borde);
+  background-color: black;
   transition: 0.4s;
   border-radius: 26px;
 }
@@ -551,13 +581,13 @@
   width: 20px;
   left: 3px;
   bottom: 3px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   transition: 0.4s;
   border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: var(--color-secundario);
+  background-color: black;
 }
 
 input:checked + .slider:before {

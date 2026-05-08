@@ -1,38 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+/* ============================================
+   ESTILOS GLOBALES - JOYERÍA DE LUJO
+   Diseño Minimalista Premium
+   ============================================ */
 
-/* Paleta de colores - Joyería de Lujo */
+/* Importar tipografía moderna y elegante para joyería de lujo */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Paleta de colores - Joyería de Lujo Minimalista */
 :root {
-  /* Colores principales */
-  --color-principal: #0F0F0F;        /* Negro elegante / lujo */
-  --color-secundario: #D4AF37;       /* Dorado clásico de joyería */
-  --color-apoyo: #2C2C2C;            /* Gris oscuro sofisticado */
-  --color-fondo-claro: #F7F5F2;      /* Marfil suave / fondo premium */
+  /* Colores principales - Blanco y Negro */
+  --color-blanco: #FFFFFF;
+  --color-negro: #0A0A0A;
+  --color-negro-soft: #1A1A1A;
+  --color-gris-oscuro: #2D2D2D;
+  --color-gris-medio: #6B6B6B;
+  --color-gris-claro: #E5E5E5;
+  --color-gris-fondo: #F8F8F8;
   
-  /* Acentos visuales */
-  --color-acento-dorado: #C9A227;    /* Dorado suave */
-  --color-acento-tarjeta: #E8E3D9;   /* Para tarjetas o secciones destacadas */
+  /* Dorado como acento - sutil y sofisticado */
+  --color-dorado: #C9A227;
+  --color-dorado-claro: #D4AF37;
+  --color-dorado-suave: #E8D48B;
   
   /* Colores de texto */
-  --color-texto-principal: #0F0F0F;
-  --color-texto-secundario: #2C2C2C;
-  --color-texto-claro: #F7F5F2;
+  --color-texto-principal: #0A0A0A;
+  --color-texto-secundario: #6B6B6B;
+  --color-texto-claro: #FFFFFF;
+  --color-texto-muted: #999999;
   
   /* Colores de fondo */
-  --color-fondo-principal: #F7F5F2;
-  --color-fondo-secundario: #E8E3D9;
-  --color-fondo-oscuro: #0F0F0F;
+  --color-fondo-principal: #FFFFFF;
+  --color-fondo-secundario: #F8F8F8;
+  --color-fondo-oscuro: #0A0A0A;
   
   /* Colores de borde */
-  --color-borde: #E8E3D9;
-  --color-borde-oscuro: #2C2C2C;
+  --color-borde: #E5E5E5;
+  --color-borde-oscuro: #2D2D2D;
   
   /* Estados */
   --color-hover: #C9A227;
   --color-active: #D4AF37;
-  --color-focus: #D4AF37;
+  --color-focus: #C9A227;
+  
+  /* Espaciado */
+  --espacio-xs: 4px;
+  --espacio-sm: 8px;
+  --espacio-md: 16px;
+  --espacio-lg: 24px;
+  --espacio-xl: 32px;
+  --espacio-xxl: 48px;
+  --espacio-xxxl: 64px;
+  
+  /* Tipografía Moderna y Elegante para Lujo */
+  --fuente-titulo: 'Playfair Display', 'Didot', serif;
+  --fuente-cuerpo: 'Inter', 'Segoe UI', sans-serif;
+  --fuente-acento: 'Crimson Text', Georgia, serif;
+  
+  /* Sombras sutiles */
+  --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --sombra-media: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --sombra-fuerte: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
-/* Eliminar márgenes por defecto del navegador */
+/* Reset y estilos base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -40,4 +74,278 @@ html, body {
   overflow-x: hidden;
   background-color: var(--color-fondo-principal);
   color: var(--color-texto-principal);
+  font-family: var(--fuente-cuerpo);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Títulos con tipografía moderna y elegante */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  color: var(--color-texto-principal);
+  letter-spacing: 0.5px;
+  font-size-adjust: 0.5;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+/* Botones base */
+button {
+  font-family: var(--fuente-cuerpo);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Inputs base */
+input, textarea, select {
+  font-family: var(--fuente-cuerpo);
+  outline: none;
+}
+
+/* Scrollbar elegante */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-fondo-secundario);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gris-medio);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dorado);
+}
+
+/* Selección de texto */
+::selection {
+  background: var(--color-dorado);
+  color: var(--color-blanco);
+}
+
+/* Iconos SVG Lucide Elegantes */
+.icon-lucide {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* Hover dorado para elementos interactivos con iconos */
+a:hover .icon-lucide, button:hover .icon-lucide, .hover-dorado:hover .icon-lucide {
+  stroke: var(--color-dorado-claro);
+}
+
+
+/* ============================================
+   ESTILOS DE BOTONES ELEGANTES
+   ============================================ */
+button, .btn, [class*="btn-"], .buscador-btn {
+  font-family: var(--fuente-cuerpo) !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.4s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  border-radius: 0 !important; /* Minimalista, sin bordes redondeados */
+  box-shadow: none !important;
+}
+
+/* Botón Primario (Negro) */
+.btn-premium-primary,
+.btn-primary,
+.btn-hero,
+.btn-comprar,
+.btn-agregar,
+.btn-guardar,
+.btn-enviar,
+.buscador-btn,
+.btn-promo {
+  background-color: var(--color-negro) !important;
+  color: var(--color-blanco) !important;
+  border: 1px solid var(--color-negro) !important;
+  padding: 14px 32px !important;
+}
+
+.btn-premium-primary:hover,
+.btn-primary:hover,
+.btn-hero:hover,
+.btn-comprar:hover,
+.btn-agregar:hover,
+.btn-guardar:hover,
+.btn-enviar:hover,
+.buscador-btn:hover,
+.btn-promo:hover {
+  background-color: transparent !important;
+  color: var(--color-negro) !important;
+  border-color: var(--color-negro) !important;
+}
+
+/* Botón Secundario / Outline */
+.btn-premium-outline,
+.btn-secundario,
+.btn-outline,
+.btn-ver-mas,
+.btn-seguir,
+.btn-editar,
+.btn-enlace {
+  background-color: transparent !important;
+  color: var(--color-negro) !important;
+  border: 1px solid var(--color-negro) !important;
+  padding: 14px 32px !important;
+  text-decoration: none !important;
+}
+
+.btn-premium-outline:hover,
+.btn-secundario:hover,
+.btn-outline:hover,
+.btn-ver-mas:hover,
+.btn-seguir:hover,
+.btn-editar:hover,
+.btn-enlace:hover {
+  background-color: var(--color-negro) !important;
+  color: var(--color-blanco) !important;
+  border-color: var(--color-negro) !important;
+}
+
+/* Botón de texto simple (Limpiar, Cancelar) */
+.btn-premium-text,
+.btn-texto,
+.btn-limpiar,
+.btn-link,
+.btn-vaciar {
+  background-color: transparent !important;
+  color: var(--color-gris-medio) !important;
+  border: none !important;
+  padding: 8px 16px !important;
+  border-bottom: 1px solid transparent !important;
+  text-decoration: none !important;
+}
+
+.btn-premium-text:hover,
+.btn-texto:hover,
+.btn-limpiar:hover,
+.btn-link:hover,
+.btn-vaciar:hover {
+  color: var(--color-negro) !important;
+  border-bottom: 1px solid var(--color-negro) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Botón de Icono */
+.btn-premium-icon,
+.btn-icon,
+.btn-accion,
+.btn-favorito,
+.btn-carrito,
+.btn-carrusel,
+.btn-anterior,
+.btn-siguiente,
+.btn-eliminar,
+.btn-cantidad {
+  background-color: transparent !important;
+  color: var(--color-negro) !important;
+  border: 1px solid var(--color-borde) !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+}
+
+.btn-premium-icon:hover,
+.btn-icon:hover,
+.btn-accion:hover,
+.btn-favorito:hover,
+.btn-carrito:hover,
+.btn-carrusel:hover,
+.btn-anterior:hover,
+.btn-siguiente:hover,
+.btn-eliminar:hover,
+.btn-cantidad:hover {
+  border-color: var(--color-dorado) !important;
+  color: var(--color-dorado) !important;
+  background-color: transparent !important;
+}
+
+/* Botón Peligro / Cerrar (Suave) */
+.btn-peligro,
+.btn-logout,
+.btn-cerrar,
+button.peligro {
+  background-color: transparent !important;
+  color: var(--color-gris-oscuro) !important;
+  border: 1px solid var(--color-gris-claro) !important;
+  padding: 12px 24px !important;
+}
+
+.btn-peligro:hover,
+.btn-logout:hover,
+.btn-cerrar:hover,
+button.peligro:hover {
+  background-color: #f8f8f8 !important;
+  color: var(--color-negro) !important;
+  border-color: var(--color-negro) !important;
+}
+
+/* Asegurar que todos los svg dentro de los botones se vean bien */
+button svg, .btn svg, [class*="btn-"] svg, .buscador-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+  transition: all 0.3s ease !important;
 }

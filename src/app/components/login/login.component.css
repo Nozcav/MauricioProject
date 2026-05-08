@@ -1,76 +1,91 @@
+/* ============================================
+   LOGIN - DISEÑO DE LUJO MINIMALISTA
+   ============================================ */
+
 .login-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-apoyo) 100%);
+  background: var(--color-blanco);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 40px;
 }
 
 .login-container {
-  background: var(--color-fondo-claro);
-  border-radius: 20px;
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 2px;
   padding: 50px 40px;
   width: 100%;
-  max-width: 450px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  box-shadow: var(--sombra-suave);
 }
 
 .login-header {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .login-header .icono-moneda {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--color-secundario), var(--color-acento-dorado));
+  width: 50px;
+  height: 50px;
+  background: var(--color-negro);
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 28px;
-  color: var(--color-principal);
-  margin-bottom: 15px;
+  font-family: var(--fuente-titulo);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-dorado);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .login-header h1 {
-  font-size: 28px;
-  color: var(--color-secundario);
+  font-family: var(--fuente-titulo);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-texto-principal);
   margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .login-subtitle {
-  margin-top: 8px;
+  margin-top: 10px;
   color: var(--color-texto-secundario);
-  font-size: 14px;
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 .login-message {
-  border-radius: 12px;
-  padding: 14px 18px;
+  border-radius: 2px;
+  padding: 12px 16px;
   margin: 0 0 20px;
-  font-size: 14px;
+  font-size: 0.85rem;
 }
 
 .login-message.error {
-  background: rgba(209, 67, 67, 0.12);
+  background: rgba(200, 50, 50, 0.05);
   color: #8a1f1f;
-  border: 1px solid rgba(209, 67, 67, 0.28);
+  border: 1px solid rgba(200, 50, 50, 0.2);
 }
 
 .login-message.success {
-  background: rgba(34, 128, 62, 0.12);
+  background: rgba(50, 150, 80, 0.05);
   color: #1f5f2d;
-  border: 1px solid rgba(34, 128, 62, 0.28);
+  border: 1px solid rgba(50, 150, 80, 0.2);
 }
 
 .login-form h2 {
   text-align: center;
-  font-size: 24px;
+  font-family: var(--fuente-titulo);
+  font-size: 1.2rem;
+  font-weight: 600;
   color: var(--color-texto-principal);
   margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 
 .form-group {
@@ -79,25 +94,29 @@
 
 .form-group label {
   display: block;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-texto-principal);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-texto-secundario);
   margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .form-group input {
   width: 100%;
   padding: 14px 16px;
-  border: 2px solid var(--color-borde);
-  border-radius: 10px;
-  font-size: 15px;
+  border: 1px solid var(--color-borde);
+  border-radius: 2px;
+  font-size: 0.9rem;
   transition: all 0.3s;
   box-sizing: border-box;
+  background: var(--color-fondo-secundario);
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--color-secundario);
+  border-color: var(--color-dorado);
+  background: var(--color-blanco);
 }
 
 .btn-primary {

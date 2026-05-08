@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { DataService } from '../../services/data.service';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-producto',
@@ -18,7 +19,8 @@ export class ProductoComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    private dataService: DataService
+    private dataService: DataService,
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit(): void {
@@ -35,7 +37,7 @@ export class ProductoComponent implements OnInit {
   agregarAlCarrito() {
     if (this.producto) {
       this.dataService.addToCart({ ...this.producto, cantidad: this.cantidad });
-      alert(`¡${this.producto.nombre} agregado al carrito! Cantidad: ${this.cantidad}`);
+      this.notificationService.success(`¡${this.producto.nombre} agregado al carrito! Cantidad: ${this.cantidad}`);
     }
   }
 

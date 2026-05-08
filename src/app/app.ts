@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Navbar } from './components/navbar/navbar';
+import { NotificationComponent } from './components/notification/notification.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, HttpClientModule, Navbar],
+  imports: [RouterOutlet, FormsModule, HttpClientModule, Navbar, NotificationComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

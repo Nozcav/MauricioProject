@@ -1,40 +1,48 @@
+/* ============================================
+   CARRITO - DISEÑO DE LUJO MINIMALISTA
+   ============================================ */
+
 .carrito {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 60px 40px;
   background-color: var(--color-fondo-principal);
 }
 
 .carrito-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .carrito-header h1 {
+  font-family: var(--fuente-titulo);
   font-size: 2rem;
+  font-weight: 600;
   color: var(--color-texto-principal);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .carrito-contenido {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   align-items: flex-start;
 }
 
 /* Lista de productos */
 .productos-lista {
   flex: 1;
-  background: var(--color-fondo-claro);
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 2px;
+  padding: 30px;
 }
 
 .carrito-item {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 20px 0;
+  gap: 24px;
+  padding: 24px 0;
   border-bottom: 1px solid var(--color-borde);
 }
 
@@ -46,7 +54,7 @@
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 2px;
 }
 
 .item-detalles {
@@ -54,46 +62,50 @@
 }
 
 .item-detalles h3 {
+  font-family: var(--fuente-titulo);
   font-size: 1rem;
+  font-weight: 600;
   color: var(--color-texto-principal);
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .item-precio {
-  color: var(--color-apoyo);
+  color: var(--color-texto-secundario);
   font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .item-cantidad {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   background: var(--color-fondo-secundario);
-  padding: 8px 12px;
-  border-radius: 10px;
+  padding: 6px 12px;
+  border-radius: 2px;
 }
 
 .btn-cantidad {
   width: 28px;
   height: 28px;
-  border: none;
-  background: var(--color-fondo-claro);
-  border-radius: 6px;
+  border: 1px solid var(--color-borde);
+  background: var(--color-blanco);
+  border-radius: 2px;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--color-secundario);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-texto-principal);
   transition: all 0.2s ease;
 }
 
 .btn-cantidad:hover {
-  background: var(--color-secundario);
-  color: var(--color-texto-claro);
+  background: var(--color-negro);
+  color: var(--color-dorado);
+  border-color: var(--color-negro);
 }
 
 .item-cantidad span {
-  font-weight: 600;
-  min-width: 20px;
+  font-weight: 500;
+  min-width: 24px;
   text-align: center;
 }
 
@@ -106,7 +118,7 @@
 
 .item-total .total {
   font-weight: 700;
-  color: var(--color-secundario);
+  color: var(--color-negro);
   font-size: 1.1rem;
 }
 
@@ -114,9 +126,17 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1.2rem;
   opacity: 0.5;
   transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.btn-eliminar svg {
+  width: 20px;
+  height: 20px;
 }
 
 .btn-eliminar:hover {
@@ -127,10 +147,10 @@
 .resumen {
   width: 350px;
   min-width: 350px;
-  background: var(--color-fondo-claro);
-  border-radius: 16px;
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 0;
   padding: 25px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 100px;
 }
@@ -165,19 +185,24 @@
 .btn-checkout {
   width: 100%;
   padding: 15px;
-  background: linear-gradient(135deg, var(--color-secundario), var(--color-acento-dorado));
-  color: var(--color-texto-claro);
-  border: none;
-  border-radius: 12px;
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #000000 !important;
+  border-radius: 0; /* Minimalista */
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .btn-checkout:hover {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .envio-gratis-msg {
@@ -185,13 +210,27 @@
   color: var(--color-secundario);
   font-size: 0.9rem;
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .envio-info {
   text-align: center;
-  color: var(--color-apoyo);
+  color: var(--color-gris-medio);
   font-size: 0.85rem;
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.envio-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-dorado);
 }
 
 .btn-seguir,
@@ -201,30 +240,41 @@
   text-align: center;
   margin-top: 15px;
   padding: 12px;
-  color: var(--color-secundario);
+  color: var(--color-negro);
   text-decoration: none;
   font-size: 0.95rem;
-  border-radius: 8px;
+  border-radius: 0;
   transition: background 0.2s ease;
 }
 
-.btn-seguir:hover,
+.btn-seguir:hover {
+  background: transparent;
+  color: #000000;
+}
+
 .btn-seguir-tienda:hover {
-  background: var(--color-acento-tarjeta);
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
 }
 
 /* Carrito vacío */
 .carrito-vacio {
   text-align: center;
   padding: 80px 20px;
-  background: var(--color-fondo-claro);
-  border-radius: 16px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 0;
 }
 
 .vacio-icono {
-  font-size: 4rem;
   margin-bottom: 20px;
+}
+
+.vacio-icono svg {
+  width: 40px;
+  height: 40px;
+  color: var(--color-gris-medio);
 }
 
 .carrito-vacio h2 {
@@ -233,17 +283,20 @@
 }
 
 .carrito-vacio p {
-  color: var(--color-apoyo);
+  color: var(--color-gris-medio);
   margin-bottom: 25px;
+  font-weight: 300;
 }
 
 .btn-seguir-tienda {
   display: inline-block;
   width: auto;
   padding: 15px 40px;
-  background: linear-gradient(135deg, var(--color-secundario), var(--color-acento-dorado));
-  color: var(--color-texto-claro);
-  border-radius: 12px;
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /* Checkout Success */
@@ -261,11 +314,12 @@
 }
 
 .success-content {
-  background: var(--color-fondo-claro);
+  background: var(--color-blanco);
   padding: 50px;
-  border-radius: 20px;
+  border-radius: 0;
   text-align: center;
   max-width: 450px;
+  border: 1px solid var(--color-borde);
   animation: slideUp 0.3s ease;
 }
 
@@ -287,13 +341,15 @@
 }
 
 .success-content h2 {
-  color: var(--color-secundario);
+  color: var(--color-negro);
   margin-bottom: 15px;
+  font-family: var(--fuente-titulo);
 }
 
 .success-content p {
-  color: var(--color-texto-secundario);
+  color: var(--color-gris-medio);
   margin-bottom: 10px;
+  font-weight: 300;
 }
 
 .success-actions {
@@ -305,22 +361,40 @@
 
 .btn-primary {
   padding: 12px 25px;
-  background: linear-gradient(135deg, var(--color-secundario), var(--color-acento-dorado));
-  color: var(--color-texto-claro);
+  background: #000000 !important;
+  color: #FFFFFF !important;
   border: none;
-  border-radius: 10px;
+  border-radius: 0;
   text-decoration: none;
   font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #000000 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
 }
 
 .btn-secondary {
   padding: 12px 25px;
-  background: var(--color-fondo-secundario);
-  color: var(--color-texto-secundario);
-  border: none;
-  border-radius: 10px;
+  background: transparent;
+  color: var(--color-negro);
+  border: 1px solid var(--color-negro);
+  border-radius: 0;
   cursor: pointer;
   font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-negro);
+  color: var(--color-blanco);
 }
 
 /* Responsive */

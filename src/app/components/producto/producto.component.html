@@ -3,7 +3,7 @@
     <!-- Imagen del producto -->
     <div class="producto-imagen">
       <img [src]="producto.imagen" [alt]="producto.nombre">
-      <span class="badge">{{ producto.badge || '✨ Nuevo' }}</span>
+      <span class="badge">{{ producto.badge || 'Nuevo' }}</span>
     </div>
     
     <!-- Información del producto -->
@@ -24,10 +24,10 @@
       <div class="caracteristicas">
         <h3>Características</h3>
         <ul>
-          <li>✓ Material: {{ producto.material }}</li>
-          <li>✓ Categoría: {{ producto.categoria }}</li>
-          <li>✓ Tipo: {{ producto.tipo }}</li>
-          <li>✓ Incluye: Caja de regalo premium</li>
+          <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Material: {{ producto.material }}</li>
+          <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Categoría: {{ producto.categoria }}</li>
+          <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Tipo: {{ producto.tipo }}</li>
+          <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Incluye: Caja de regalo premium</li>
         </ul>
       </div>
       
@@ -40,15 +40,25 @@
         </div>
         
         <button class="btn-agregar" (click)="agregarAlCarrito()">
-          🛒 Agregar al Carrito
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-icon"><path d="M5 6h15l-1.5 9h-12L4 4H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></svg>
+          Agregar al Carrito
         </button>
       </div>
       
       <!-- Info adicional -->
       <div class="info-adicional">
-        <div class="info-item">🚚 Envío gratis en pedidos mayores a $100</div>
-        <div class="info-item">↩️ Devolución gratis en 30 días</div>
-        <div class="info-item">🔒 Pago 100% seguro</div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="info-icon"><path d="M5 6h15l-1.5 9h-12L4 4H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></svg>
+          Envío gratis en pedidos mayores a $100
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="info-icon"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Devolución gratis en 30 días
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="info-icon"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2"/></svg>
+          Pago 100% seguro
+        </div>
       </div>
     </div>
   </div>
