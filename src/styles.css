@@ -125,6 +125,107 @@ h6 {
   font-weight: 600;
 }
 
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ============================================ */
+
+/* Mobile - Extra pequeños (< 480px) */
+@media (max-width: 479px) {
+  h1 {
+    font-size: 1.75rem;
+    letter-spacing: -0.5px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  :root {
+    --espacio-xs: 2px;
+    --espacio-sm: 4px;
+    --espacio-md: 8px;
+    --espacio-lg: 12px;
+    --espacio-xl: 16px;
+    --espacio-xxl: 24px;
+    --espacio-xxxl: 32px;
+  }
+}
+
+/* Mobile - Pequeños (480px - 640px) */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h5 {
+    font-size: 1.05rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  :root {
+    --espacio-xs: 2px;
+    --espacio-sm: 6px;
+    --espacio-md: 12px;
+    --espacio-lg: 16px;
+    --espacio-xl: 20px;
+    --espacio-xxl: 28px;
+    --espacio-xxxl: 36px;
+  }
+
+  button, .btn, [class*="btn-"], .buscador-btn {
+    padding: 10px 20px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Tablet (641px - 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  button, .btn, [class*="btn-"], .buscador-btn {
+    padding: 12px 24px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
 /* Links */
 a {
   text-decoration: none;

@@ -589,39 +589,672 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .hero-section {
+    padding: 80px 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .resumen-section {
+    padding: 50px 30px;
+  }
+
   .resumen-grid,
   .garantias-grid,
   .contacto-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .resumen-item {
+    padding: 28px 20px;
+  }
+
+  .politicas-detalladas-section,
+  .pasos-section,
+  .faq-section,
+  .contacto-section,
+  .documentos-section {
+    padding: 70px 30px;
+  }
+
+  .politicas-detalladas-section h2,
+  .pasos-section h2,
+  .faq-section h2,
+  .contacto-section h2,
+  .documentos-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
   }
 
   .politicas-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .politica-card {
+    padding: 30px;
+  }
+
+  .pasos-grid {
+    gap: 20px;
+  }
+
+  .paso-item {
+    flex-direction: row;
   }
 
   .documentos-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .documento-card {
+    padding: 30px 20px;
   }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .hero-section {
+    padding: 60px 20px 50px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
   .hero-content h1 {
-    font-size: 36px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .resumen-section {
+    padding: 40px 20px;
   }
 
   .resumen-grid,
   .garantias-grid,
-  .contacto-grid,
-  .documentos-grid {
+  .contacto-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .resumen-item {
+    padding: 20px 16px;
+    border-radius: 8px;
+  }
+
+  .resumen-icono {
+    font-size: 36px;
+  }
+
+  .resumen-item h3 {
+    font-size: 18px;
+  }
+
+  .resumen-item p {
+    font-size: 13px;
+  }
+
+  .politicas-detalladas-section,
+  .pasos-section,
+  .faq-section,
+  .contacto-section,
+  .documentos-section {
+    padding: 50px 20px;
+  }
+
+  .politicas-detalladas-section h2,
+  .pasos-section h2,
+  .faq-section h2,
+  .contacto-section h2,
+  .documentos-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+  }
+
+  .politicas-grid {
+    gap: 16px;
+  }
+
+  .politica-card {
+    padding: 24px;
+  }
+
+  .politica-header {
+    gap: 12px;
+  }
+
+  .politica-header h3 {
+    font-size: 20px;
+  }
+
+  .politica-icono {
+    font-size: 40px;
+  }
+
+  .politica-descripcion {
+    font-size: 14px;
+  }
+
+  .politica-detalles li {
+    font-size: 13px;
+  }
+
+  .pasos-grid {
+    gap: 16px;
   }
 
   .paso-item {
     flex-direction: column;
     text-align: center;
+    padding: 24px;
   }
 
   .paso-numero {
-    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    margin: 0 auto 16px;
+  }
+
+  .paso-contenido h3 {
+    font-size: 16px;
+  }
+
+  .paso-contenido p {
+    font-size: 13px;
+  }
+
+  .faq-lista {
+    gap: 12px;
+  }
+
+  .faq-item {
+    border-radius: 10px;
+  }
+
+  .faq-header {
+    padding: 16px 20px;
+  }
+
+  .faq-header h3 {
+    font-size: 15px;
+  }
+
+  .faq-icono {
+    font-size: 20px;
+  }
+
+  .faq-respuesta {
+    padding: 0 20px 16px;
+  }
+
+  .faq-respuesta p {
+    font-size: 14px;
+  }
+
+  .contacto-intro {
+    font-size: 16px;
+  }
+
+  .contacto-grid {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .contacto-card {
+    padding: 24px;
+  }
+
+  .contacto-icono {
+    font-size: 36px;
+  }
+
+  .contacto-card h3 {
+    font-size: 18px;
+  }
+
+  .contacto-card p {
+    font-size: 13px;
+  }
+
+  .contacto-button {
+    padding: 12px 32px;
+    font-size: 16px;
+  }
+
+  .documentos-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .documento-card {
+    padding: 24px;
+  }
+
+  .documento-icono {
+    font-size: 40px;
+  }
+
+  .documento-card h3 {
+    font-size: 18px;
+  }
+
+  .documento-card p {
+    font-size: 13px;
+  }
+
+  .documento-link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-section {
+    padding: 40px 16px 36px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .resumen-section {
+    padding: 32px 16px;
+  }
+
+  .resumen-grid,
+  .garantias-grid,
+  .contacto-grid {
+    gap: 12px;
+  }
+
+  .resumen-item {
+    padding: 16px 12px;
+    border-radius: 6px;
+  }
+
+  .resumen-icono {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .resumen-item h3 {
+    font-size: 16px;
+  }
+
+  .resumen-item p {
+    font-size: 12px;
+  }
+
+  .politicas-detalladas-section,
+  .pasos-section,
+  .faq-section,
+  .contacto-section,
+  .documentos-section {
+    padding: 40px 16px;
+  }
+
+  .politicas-detalladas-section h2,
+  .pasos-section h2,
+  .faq-section h2,
+  .contacto-section h2,
+  .documentos-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+  }
+
+  .politicas-grid {
+    gap: 12px;
+  }
+
+  .politica-card {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .politica-header {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .politica-header h3 {
+    font-size: 16px;
+  }
+
+  .politica-icono {
+    font-size: 32px;
+  }
+
+  .politica-descripcion {
+    font-size: 12px;
+  }
+
+  .politica-detalles li {
+    font-size: 11px;
+    padding: 6px 0;
+  }
+
+  .pasos-grid {
+    gap: 12px;
+  }
+
+  .paso-item {
+    padding: 16px;
+  }
+
+  .paso-numero {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .paso-contenido h3 {
+    font-size: 14px;
+  }
+
+  .paso-contenido p {
+    font-size: 12px;
+  }
+
+  .faq-lista {
+    gap: 10px;
+  }
+
+  .faq-item {
+    border-radius: 8px;
+  }
+
+  .faq-header {
+    padding: 12px 16px;
+  }
+
+  .faq-header h3 {
+    font-size: 13px;
+  }
+
+  .faq-icono {
+    font-size: 18px;
+  }
+
+  .faq-respuesta {
+    padding: 0 16px 12px;
+  }
+
+  .faq-respuesta p {
+    font-size: 12px;
+  }
+
+  .contacto-intro {
+    font-size: 14px;
+  }
+
+  .contacto-grid {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .contacto-card {
+    padding: 16px;
+  }
+
+  .contacto-icono {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .contacto-card h3 {
+    font-size: 16px;
+  }
+
+  .contacto-card p {
+    font-size: 12px;
+  }
+
+  .contacto-button {
+    padding: 10px 24px;
+    font-size: 14px;
+    border-radius: 24px;
+  }
+
+  .documentos-grid {
+    gap: 12px;
+  }
+
+  .documento-card {
+    padding: 16px;
+  }
+
+  .documento-icono {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .documento-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .documento-card p {
+    font-size: 12px;
+  }
+
+  .documento-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 479px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .hero-section {
+    padding: 32px 12px 28px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .resumen-section {
+    padding: 24px 12px;
+  }
+
+  .resumen-grid,
+  .garantias-grid,
+  .contacto-grid {
+    gap: 10px;
+  }
+
+  .resumen-item {
+    padding: 12px 10px;
+  }
+
+  .resumen-icono {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .resumen-item h3 {
+    font-size: 14px;
+  }
+
+  .resumen-item p {
+    font-size: 11px;
+  }
+
+  .politicas-detalladas-section,
+  .pasos-section,
+  .faq-section,
+  .contacto-section,
+  .documentos-section {
+    padding: 32px 12px;
+  }
+
+  .politicas-detalladas-section h2,
+  .pasos-section h2,
+  .faq-section h2,
+  .contacto-section h2,
+  .documentos-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .politicas-grid {
+    gap: 10px;
+  }
+
+  .politica-card {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .politica-header {
+    gap: 8px;
+  }
+
+  .politica-header h3 {
+    font-size: 14px;
+  }
+
+  .politica-icono {
+    font-size: 28px;
+  }
+
+  .politica-descripcion {
+    font-size: 11px;
+  }
+
+  .politica-detalles li {
+    font-size: 10px;
+  }
+
+  .pasos-grid {
+    gap: 10px;
+  }
+
+  .paso-item {
+    padding: 12px;
+  }
+
+  .paso-numero {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .paso-contenido h3 {
+    font-size: 12px;
+  }
+
+  .paso-contenido p {
+    font-size: 10px;
+  }
+
+  .faq-lista {
+    gap: 8px;
+  }
+
+  .faq-header {
+    padding: 10px 12px;
+  }
+
+  .faq-header h3 {
+    font-size: 12px;
+  }
+
+  .faq-icono {
+    font-size: 16px;
+  }
+
+  .faq-respuesta {
+    padding: 0 12px 10px;
+  }
+
+  .faq-respuesta p {
+    font-size: 10px;
+  }
+
+  .contacto-intro {
+    font-size: 12px;
+  }
+
+  .contacto-grid {
+    gap: 10px;
+  }
+
+  .contacto-card {
+    padding: 12px;
+  }
+
+  .contacto-icono {
+    font-size: 28px;
+  }
+
+  .contacto-card h3 {
+    font-size: 14px;
+  }
+
+  .contacto-card p {
+    font-size: 10px;
+  }
+
+  .contacto-button {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+
+  .documentos-grid {
+    gap: 10px;
+  }
+
+  .documento-card {
+    padding: 12px;
+  }
+
+  .documento-icono {
+    font-size: 28px;
+  }
+
+  .documento-card h3 {
+    font-size: 14px;
+  }
+
+  .documento-card p {
+    font-size: 10px;
+  }
+
+  .documento-link {
+    font-size: 10px;
   }
 }

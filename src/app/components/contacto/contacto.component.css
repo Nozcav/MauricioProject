@@ -237,8 +237,461 @@
 .mapa-info h4 { font-family: var(--fuente-titulo); margin-bottom: 10px; }
 .mapa-info p { font-size: 0.9rem; color: var(--color-texto-secundario); }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 100px 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Info Cards */
+  .info-grid {
+    gap: 16px;
+  }
+
+  .info-card {
+    padding: 32px 16px;
+  }
+
+  .info-card h3 {
+    font-size: 0.8rem;
+  }
+
+  .info-card p {
+    font-size: 0.95rem;
+  }
+
+  /* Formulario */
+  .formulario-section {
+    padding: 60px 0;
+  }
+
+  .formulario-grid {
+    gap: 40px;
+  }
+
+  .formulario-container h2,
+  .mapa-container h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Redes */
+  .redes-section {
+    padding: 80px 0;
+  }
+
+  .redes-section h2 {
+    font-size: 2rem;
+  }
+
+  .redes-grid {
+    gap: 20px;
+  }
+
+  .red-social {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 768px) {
-  .formulario-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .hero-content h1 { font-size: 2.2rem; }
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 80px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    max-width: none;
+  }
+
+  /* Info Cards */
+  .info-contacto-section {
+    margin-top: -30px;
+    padding-bottom: 60px;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .info-card {
+    padding: 24px 12px;
+  }
+
+  .info-card h3 {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+
+  .info-card p {
+    font-size: 0.9rem;
+  }
+
+  .info-nota {
+    font-size: 0.65rem;
+  }
+
+  .info-icono {
+    margin-bottom: 12px;
+  }
+
+  /* Formulario */
+  .formulario-section {
+    padding: 40px 0;
+  }
+
+  .formulario-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .formulario-container h2,
+  .mapa-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .contacto-form input,
+  .contacto-form select,
+  .contacto-form textarea {
+    padding: 12px 0;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+  }
+
+  .contacto-form label {
+    font-size: 0.65rem;
+  }
+
+  .submit-button {
+    padding: 16px;
+    font-size: 0.85rem;
+  }
+
+  /* Mapa */
+  .mapa-placeholder {
+    height: 250px;
+    margin-bottom: 16px;
+  }
+
+  .mapa-info h4 {
+    font-size: 1rem;
+  }
+
+  .mapa-info p {
+    font-size: 0.85rem;
+  }
+
+  /* Redes */
+  .redes-section {
+    padding: 60px 16px;
+  }
+
+  .redes-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  .redes-intro {
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+  }
+
+  .redes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .red-social {
+    padding: 16px;
+  }
+
+  .red-icono-svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 12px;
+  }
+
+  .red-nombre {
+    font-size: 1rem;
+  }
+
+  .red-seguidores {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 60px 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  /* Info Cards */
+  .info-contacto-section {
+    margin-top: -20px;
+    padding-bottom: 40px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .info-card {
+    padding: 20px 12px;
+  }
+
+  .info-card h3 {
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+  }
+
+  .info-card p {
+    font-size: 0.85rem;
+  }
+
+  .info-nota {
+    font-size: 0.6rem;
+  }
+
+  /* Formulario */
+  .formulario-section {
+    padding: 30px 0;
+  }
+
+  .formulario-container h2,
+  .mapa-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .contacto-form input,
+  .contacto-form select,
+  .contacto-form textarea {
+    padding: 10px 0;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+  }
+
+  .contacto-form label {
+    font-size: 0.6rem;
+  }
+
+  .submit-button {
+    padding: 12px;
+    font-size: 0.75rem;
+  }
+
+  /* Mapa */
+  .mapa-placeholder {
+    height: 200px;
+  }
+
+  .mapa-info h4 {
+    font-size: 0.95rem;
+  }
+
+  .mapa-info p {
+    font-size: 0.8rem;
+  }
+
+  /* Redes */
+  .redes-section {
+    padding: 40px 12px;
+  }
+
+  .redes-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .redes-intro {
+    margin-bottom: 30px;
+    font-size: 0.85rem;
+  }
+
+  .redes-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .red-social {
+    padding: 12px;
+  }
+
+  .red-icono-svg {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 8px;
+  }
+
+  .red-nombre {
+    font-size: 0.9rem;
+  }
+
+  .red-seguidores {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 40px 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+  }
+
+  /* Info Cards */
+  .info-contacto-section {
+    margin-top: -10px;
+    padding-bottom: 30px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .info-card {
+    padding: 16px 10px;
+  }
+
+  .info-card h3 {
+    font-size: 0.65rem;
+    margin-bottom: 6px;
+  }
+
+  .info-card p {
+    font-size: 0.8rem;
+  }
+
+  .info-nota {
+    font-size: 0.55rem;
+  }
+
+  .info-icono {
+    margin-bottom: 8px;
+  }
+
+  /* Formulario */
+  .formulario-section {
+    padding: 20px 0;
+  }
+
+  .formulario-container h2,
+  .mapa-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .contacto-form input,
+  .contacto-form select,
+  .contacto-form textarea {
+    padding: 8px 0;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+  }
+
+  .contacto-form label {
+    font-size: 0.55rem;
+  }
+
+  .submit-button {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+
+  /* Mapa */
+  .mapa-placeholder {
+    height: 150px;
+    margin-bottom: 12px;
+  }
+
+  .mapa-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .mapa-info p {
+    font-size: 0.75rem;
+  }
+
+  /* Redes */
+  .redes-section {
+    padding: 30px 10px;
+  }
+
+  .redes-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .redes-intro {
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+  }
+
+  .redes-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .red-social {
+    padding: 10px;
+  }
+
+  .red-icono-svg {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 6px;
+  }
+
+  .red-nombre {
+    font-size: 0.8rem;
+  }
+
+  .red-seguidores {
+    font-size: 0.55rem;
+  }
 }

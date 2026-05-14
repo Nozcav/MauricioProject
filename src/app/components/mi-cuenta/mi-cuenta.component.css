@@ -634,50 +634,626 @@ input:checked + .slider:before {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+  .mi-cuenta {
+    padding: 40px 24px;
+  }
+
+  .cuenta-header {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
   .cuenta-layout {
-    flex-direction: column;
+    gap: 30px;
   }
-  
+
   .cuenta-sidebar {
-    width: 100%;
-    min-width: unset;
-    position: static;
+    width: 220px;
+    min-width: 220px;
+    padding: 20px;
   }
-  
+
   .sidebar-item {
-    display: inline-flex;
-    width: auto;
-    flex: 0 0 auto;
+    padding: 10px 12px;
+    font-size: 0.8rem;
   }
-  
-  .sidebar-item span.item-nombre {
-    display: none;
+
+  .item-icono {
+    width: 24px;
+    height: 24px;
   }
-  
-  .sidebar-item.active span.item-nombre {
-    display: inline;
+
+  .sidebar-text {
+    font-size: 0.9rem;
+  }
+
+  .cuenta-contenido {
+    padding: 24px;
+  }
+
+  .seccion h2 {
+    font-size: 1.3rem;
+  }
+
+  .pedido-item {
+    padding: 16px;
+  }
+
+  .config-item {
+    padding: 16px;
+  }
+
+  .direcciones-lista {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
 
 @media (max-width: 768px) {
   .mi-cuenta {
-    padding: 20px 15px;
+    padding: 24px 16px;
   }
-  
+
+  .cuenta-header {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .cuenta-header-text {
+    flex: 1;
+  }
+
+  .btn-logout {
+    width: 100%;
+  }
+
+  .cuenta-layout {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .cuenta-sidebar {
+    width: 100%;
+    min-width: unset;
+    position: static;
+    padding: 16px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .sidebar-item {
+    flex: 0 0 auto;
+    min-width: max-content;
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+
+  .item-icono {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sidebar-text {
+    font-size: 0.8rem;
+  }
+
   .cuenta-contenido {
     padding: 20px;
+    min-height: auto;
   }
-  
+
+  .seccion h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .seccion-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-card {
+    padding: 16px;
+  }
+
+  .form-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+  }
+
+  .form-input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .btn-guardar,
+  .btn-editar,
+  .btn-agregar {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .perfil-info {
+    gap: 16px;
+  }
+
+  .info-item label {
+    font-size: 0.8rem;
+  }
+
+  .info-item span {
+    font-size: 0.95rem;
+  }
+
+  .pedidos-lista {
+    gap: 12px;
+  }
+
   .pedido-item {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: 12px;
+    padding: 12px;
   }
-  
+
+  .pedido-derecha {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pedido-detalles-expandido {
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+
+  .producto-pedido {
+    font-size: 0.85rem;
+    padding: 6px 0;
+  }
+
+  .direcciones-lista {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .direccion-item {
+    padding: 16px;
+  }
+
+  .dir-nombre {
+    font-size: 0.95rem;
+  }
+
+  .dir-datos {
+    font-size: 0.85rem;
+  }
+
+  .btn-texto {
+    font-size: 0.8rem;
+  }
+
+  .pagos-lista {
+    gap: 12px;
+  }
+
+  .pago-item {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .pago-marca {
+    font-size: 0.95rem;
+  }
+
+  .pago-expira {
+    font-size: 0.8rem;
+  }
+
+  .config-opciones {
+    gap: 16px;
+  }
+
   .config-item {
     flex-direction: column;
-    gap: 15px;
-    text-align: center;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .config-info h4 {
+    font-size: 0.95rem;
+  }
+
+  .config-info p {
+    font-size: 0.8rem;
+  }
+
+  .vacio {
+    padding: 40px 16px;
+  }
+
+  .vacio p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .mi-cuenta {
+    padding: 20px 12px;
+  }
+
+  .cuenta-header {
+    gap: 12px;
+  }
+
+  .header-icono {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-icono svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cuenta-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .cuenta-header p {
+    font-size: 0.8rem;
+  }
+
+  .btn-logout {
+    padding: 10px 16px;
+    font-size: 0.75rem;
+  }
+
+  .cuenta-sidebar {
+    padding: 12px;
+    gap: 6px;
+  }
+
+  .sidebar-item {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+    margin-bottom: 0;
+  }
+
+  .item-icono {
+    width: 18px;
+    height: 18px;
+  }
+
+  .sidebar-text {
+    font-size: 0.7rem;
+  }
+
+  .cuenta-contenido {
+    padding: 16px;
+  }
+
+  .seccion h2 {
+    font-size: 1rem;
+  }
+
+  .form-card {
+    padding: 12px;
+  }
+
+  .form-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group label {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+  }
+
+  .form-input {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .btn-guardar,
+  .btn-editar,
+  .btn-agregar {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .perfil-info {
+    gap: 12px;
+  }
+
+  .info-item label {
+    font-size: 0.75rem;
+  }
+
+  .info-item span {
+    font-size: 0.9rem;
+  }
+
+  .pedido-item {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .pedido-id {
+    font-size: 0.9rem;
+  }
+
+  .pedido-detalles {
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+
+  .pedido-total {
+    font-size: 1rem;
+  }
+
+  .pedido-estado {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .direcciones-lista {
+    gap: 10px;
+  }
+
+  .direccion-item {
+    padding: 12px;
+  }
+
+  .dir-nombre {
+    font-size: 0.9rem;
+  }
+
+  .dir-datos {
+    font-size: 0.8rem;
+  }
+
+  .dir-acciones {
+    gap: 8px;
+  }
+
+  .badge-principal {
+    padding: 3px 8px;
+    font-size: 0.65rem;
+  }
+
+  .pagos-lista {
+    gap: 10px;
+  }
+
+  .pago-item {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .pago-icono {
+    font-size: 1.2rem;
+  }
+
+  .config-item {
+    padding: 12px;
+  }
+
+  .config-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .config-info p {
+    font-size: 0.75rem;
+  }
+
+  .btn-cerrar {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+  }
+
+  .vacio {
+    padding: 30px 12px;
+  }
+
+  .vacio p {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 479px) {
+  .mi-cuenta {
+    padding: 16px 10px;
+  }
+
+  .cuenta-header {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .header-icono {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-icono svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cuenta-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .cuenta-header p {
+    font-size: 0.75rem;
+  }
+
+  .btn-logout {
+    padding: 8px 12px;
+    font-size: 0.7rem;
+    width: 100%;
+  }
+
+  .cuenta-sidebar {
+    padding: 10px;
+    gap: 4px;
+  }
+
+  .sidebar-item {
+    padding: 4px 6px;
+    font-size: 0.65rem;
+  }
+
+  .item-icono {
+    width: 16px;
+    height: 16px;
+  }
+
+  .sidebar-text {
+    font-size: 0.65rem;
+  }
+
+  .cuenta-contenido {
+    padding: 12px;
+  }
+
+  .seccion h2 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .form-card {
+    padding: 10px;
+  }
+
+  .form-card h3 {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+
+  .form-group {
+    margin-bottom: 8px;
+  }
+
+  .form-group label {
+    font-size: 0.7rem;
+    margin-bottom: 2px;
+  }
+
+  .form-input {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+
+  .btn-guardar,
+  .btn-editar,
+  .btn-agregar {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .pedido-item {
+    padding: 8px;
+  }
+
+  .pedido-id {
+    font-size: 0.85rem;
+  }
+
+  .pedido-detalles {
+    gap: 8px;
+    font-size: 0.75rem;
+  }
+
+  .pedido-total {
+    font-size: 0.95rem;
+  }
+
+  .pedido-estado {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+  }
+
+  .direccion-item {
+    padding: 10px;
+  }
+
+  .dir-nombre {
+    font-size: 0.85rem;
+  }
+
+  .dir-datos {
+    font-size: 0.75rem;
+  }
+
+  .badge-principal {
+    padding: 2px 6px;
+    font-size: 0.6rem;
+  }
+
+  .pago-item {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .pago-icono {
+    font-size: 1rem;
+  }
+
+  .pago-marca {
+    font-size: 0.85rem;
+  }
+
+  .pago-expira {
+    font-size: 0.75rem;
+  }
+
+  .config-item {
+    padding: 10px;
+  }
+
+  .config-info h4 {
+    font-size: 0.85rem;
+  }
+
+  .config-info p {
+    font-size: 0.7rem;
+  }
+
+  .btn-cerrar {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+
+  .vacio {
+    padding: 20px 10px;
+  }
+
+  .vacio p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .btn-enlace {
+    font-size: 0.9rem;
   }
 }

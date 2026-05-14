@@ -5,7 +5,7 @@ from uuid import uuid4
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, create_engine, delete, func, select
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, create_engine, delete, func, select, update
 from sqlalchemy.orm import Session, declarative_base, relationship, sessionmaker
 from typing import List, Optional
 
@@ -665,12 +665,12 @@ store = {
 
 DATABASE_URL = os.environ.get(
     "DATABASE_URL",
-    "postgresql+psycopg2://postgres:postgres@localhost:5432/tienda"
+    "sqlite:///./tienda.db"
 )
 USER_ID = 1
 
-engine = create_engine(DATABASE_URL, future=True)
-SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False, future=True)
+engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {})
+SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 Base = declarative_base()
 
 class ProductDB(Base):
@@ -1104,6 +1104,12 @@ def create_address(address: Address, db: Session = Depends(get_db)) -> List[Addr
     ).first()
     if existing:
         raise HTTPException(status_code=400, detail="La dirección ya existe")
+    
+    if address.principal:
+        db.execute(
+            update(AddressDB).where(AddressDB.user_id == USER_ID).values(principal=False)
+        )
+        
     db.add(AddressDB(user_id=USER_ID, **address.dict()))
     db.commit()
     return get_addresses(db)
@@ -1115,6 +1121,12 @@ def update_address(address_id: int, address: Address, db: Session = Depends(get_
     ).first()
     if not existing:
         raise HTTPException(status_code=404, detail="Dirección no encontrada")
+        
+    if address.principal and not existing.principal:
+        db.execute(
+            update(AddressDB).where(AddressDB.user_id == USER_ID).values(principal=False)
+        )
+        
     existing.nombre = address.nombre
     existing.direccion = address.direccion
     existing.ciudad = address.ciudad
@@ -1140,6 +1152,12 @@ def create_payment(payment: PaymentMethod, db: Session = Depends(get_db)) -> Lis
     ).first()
     if existing:
         raise HTTPException(status_code=400, detail="El método de pago ya existe")
+        
+    if payment.principal:
+        db.execute(
+            update(PaymentMethodDB).where(PaymentMethodDB.user_id == USER_ID).values(principal=False)
+        )
+        
     db.add(PaymentMethodDB(user_id=USER_ID, **payment.dict()))
     db.commit()
     return get_payments(db)
@@ -1151,6 +1169,12 @@ def update_payment(payment_id: int, payment: PaymentMethod, db: Session = Depend
     ).first()
     if not existing:
         raise HTTPException(status_code=404, detail="Método de pago no encontrado")
+        
+    if payment.principal and not existing.principal:
+        db.execute(
+            update(PaymentMethodDB).where(PaymentMethodDB.user_id == USER_ID).values(principal=False)
+        )
+        
     existing.tipo = payment.tipo
     existing.marca = payment.marca
     existing.ultimosDigitos = payment.ultimosDigitos

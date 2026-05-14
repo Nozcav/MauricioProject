@@ -447,44 +447,608 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .historia-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .mision-vision-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .mision-card,
+  .vision-card {
+    padding: 36px;
+  }
+
+  .mision-card h3,
+  .vision-card h3 {
+    font-size: 24px;
+  }
+
   .valores-grid,
   .logros-grid,
   .proceso-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
-  
+
   .equipo-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  .valores-section h2,
+  .logros-section h2,
+  .equipo-section h2,
+  .proceso-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .mision-vision-section,
+  .valores-section,
+  .logros-section,
+  .equipo-section,
+  .proceso-section {
+    padding: 70px 20px;
+  }
+
+  .imagen-placeholder {
+    width: 280px;
+    height: 280px;
+  }
+
+  .icono-grande {
+    font-size: 70px;
+  }
+
+  .cta-section {
+    padding: 80px 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 32px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 36px;
+    font-size: 2rem;
+    letter-spacing: 2px;
   }
-  
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .historia-section {
+    padding: 60px 20px;
+  }
+
   .historia-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
-  
+
+  .historia-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .historia-texto p {
+    font-size: 0.9rem;
+  }
+
+  .imagen-placeholder {
+    width: 240px;
+    height: 240px;
+  }
+
+  .icono-grande {
+    font-size: 60px;
+  }
+
+  .mision-vision-section {
+    padding: 50px 20px;
+  }
+
   .mision-vision-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
-  
+
+  .mision-card,
+  .vision-card {
+    padding: 28px;
+  }
+
+  .card-icono {
+    font-size: 40px;
+  }
+
+  .mision-card h3,
+  .vision-card h3 {
+    font-size: 20px;
+  }
+
+  .mision-card p,
+  .vision-card p {
+    font-size: 0.9rem;
+  }
+
+  .valores-section,
+  .logros-section,
+  .proceso-section {
+    padding: 50px 20px;
+  }
+
+  .valores-section h2,
+  .logros-section h2,
+  .proceso-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+  }
+
   .valores-grid,
   .logros-grid,
-  .proceso-grid,
-  .equipo-grid {
-    grid-template-columns: 1fr;
+  .proceso-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
-  
+
+  .valor-card,
+  .logro-item,
+  .proceso-step {
+    padding: 24px;
+  }
+
+  .valor-icono,
+  .valor-card h4,
+  .logro-numero,
+  .proceso-step h4 {
+    font-size: 18px;
+  }
+
+  .valor-card p,
+  .logro-texto,
+  .proceso-step p {
+    font-size: 0.85rem;
+  }
+
+  .equipo-section {
+    padding: 50px 20px;
+  }
+
+  .equipo-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .equipo-intro {
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+  }
+
+  .equipo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .equipo-card {
+    padding: 28px 20px;
+  }
+
+  .equipo-imagen {
+    font-size: 56px;
+  }
+
+  .equipo-card h4 {
+    font-size: 18px;
+  }
+
+  .equipo-cargo {
+    font-size: 12px;
+  }
+
+  .equipo-card p {
+    font-size: 0.85rem;
+  }
+
+  .cta-section {
+    padding: 60px 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .cta-section p {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  .cta-button {
+    padding: 12px 32px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .historia-section {
+    padding: 40px 16px;
+  }
+
+  .historia-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .historia-texto h2 {
+    font-size: 1.3rem;
+  }
+
+  .historia-texto p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
   .imagen-placeholder {
     width: 200px;
     height: 200px;
   }
-  
+
   .icono-grande {
-    font-size: 60px;
+    font-size: 50px;
+  }
+
+  .imagen-placeholder p {
+    font-size: 14px;
+  }
+
+  .mision-vision-section {
+    padding: 40px 16px;
+  }
+
+  .mision-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mision-card,
+  .vision-card {
+    padding: 20px;
+  }
+
+  .card-icono {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  .mision-card h3,
+  .vision-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .mision-card p,
+  .vision-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .valores-section,
+  .logros-section,
+  .equipo-section,
+  .proceso-section {
+    padding: 40px 16px;
+  }
+
+  .valores-section h2,
+  .logros-section h2,
+  .equipo-section h2,
+  .proceso-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 28px;
+  }
+
+  .valores-grid,
+  .logros-grid,
+  .proceso-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .valor-card,
+  .logro-item,
+  .proceso-step {
+    padding: 18px;
+  }
+
+  .valor-icono {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .valor-card h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .valor-card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .logro-numero {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .logro-texto {
+    font-size: 0.8rem;
+  }
+
+  .paso-numero {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .proceso-step h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .proceso-step p {
+    font-size: 0.8rem;
+  }
+
+  .equipo-intro {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+
+  .equipo-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .equipo-card {
+    padding: 20px 16px;
+  }
+
+  .equipo-imagen {
+    font-size: 48px;
+    margin-bottom: 12px;
+  }
+
+  .equipo-card h4 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .equipo-cargo {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .equipo-card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .cta-section {
+    padding: 40px 16px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .cta-section p {
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+
+  .cta-button {
+    padding: 10px 26px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-content h1 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-content p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .historia-section {
+    padding: 32px 12px;
+  }
+
+  .historia-texto h2 {
+    font-size: 1.1rem;
+  }
+
+  .historia-texto p {
+    font-size: 0.8rem;
+  }
+
+  .imagen-placeholder {
+    width: 160px;
+    height: 160px;
+  }
+
+  .icono-grande {
+    font-size: 42px;
+    margin-bottom: 8px;
+  }
+
+  .imagen-placeholder p {
+    font-size: 12px;
+  }
+
+  .mision-vision-section {
+    padding: 32px 12px;
+  }
+
+  .mision-vision-grid {
+    gap: 16px;
+  }
+
+  .mision-card,
+  .vision-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .card-icono {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .mision-card h3,
+  .vision-card h3 {
+    font-size: 16px;
+  }
+
+  .mision-card p,
+  .vision-card p {
+    font-size: 0.8rem;
+  }
+
+  .valores-section,
+  .logros-section,
+  .equipo-section,
+  .proceso-section {
+    padding: 32px 12px;
+  }
+
+  .valores-section h2,
+  .logros-section h2,
+  .equipo-section h2,
+  .proceso-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .valores-grid,
+  .logros-grid,
+  .proceso-grid {
+    gap: 12px;
+  }
+
+  .valor-card,
+  .logro-item,
+  .proceso-step {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .valor-icono {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .valor-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .valor-card p {
+    font-size: 0.75rem;
+  }
+
+  .logro-numero {
+    font-size: 32px;
+  }
+
+  .logro-texto {
+    font-size: 0.75rem;
+  }
+
+  .step-numero {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .proceso-step h4 {
+    font-size: 0.9rem;
+  }
+
+  .proceso-step p {
+    font-size: 0.75rem;
+  }
+
+  .equipo-intro {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+
+  .equipo-grid {
+    gap: 16px;
+  }
+
+  .equipo-card {
+    padding: 16px 12px;
+    border-radius: 12px;
+  }
+
+  .equipo-imagen {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .equipo-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .equipo-cargo {
+    font-size: 10px;
+  }
+
+  .equipo-card p {
+    font-size: 0.75rem;
+  }
+
+  .cta-section {
+    padding: 32px 12px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .cta-section p {
+    font-size: 0.8rem;
+    margin-bottom: 14px;
+  }
+
+  .cta-button {
+    padding: 8px 20px;
+    font-size: 12px;
+    border-radius: 24px;
   }
 }

@@ -602,53 +602,755 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .hero-section {
+    padding: 80px 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .beneficios-rapidos {
+    padding: 50px 30px;
+  }
+
   .beneficios-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
-  
+
+  .beneficio-item {
+    padding: 22px;
+  }
+
+  .opciones-section,
+  .cobertura-section,
+  .informacion-section,
+  .faq-section,
+  .contacto-final-section,
+  .politicas-relacionadas-section {
+    padding: 70px 30px;
+  }
+
+  .opciones-section h2,
+  .cobertura-section h2,
+  .informacion-section h2,
+  .faq-section h2,
+  .contacto-final-section h2,
+  .politicas-relacionadas-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
   .opciones-grid {
-    grid-template-columns: 1fr;
+    gap: 24px;
   }
-  
+
+  .opcion-card {
+    padding: 36px;
+  }
+
   .cobertura-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
-  
+
+  .zona-card {
+    padding: 30px 20px;
+  }
+
   .info-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
-  
+
+  .info-card {
+    padding: 30px;
+  }
+
   .contacto-final-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
-  
+
+  .contacto-final-card {
+    padding: 30px 20px;
+  }
+
   .politicas-relacionadas-grid {
-    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .politica-relacionada-card {
+    padding: 30px 20px;
   }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .hero-section {
+    padding: 60px 20px 50px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
   .hero-content h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .beneficios-rapidos {
+    padding: 40px 20px;
+  }
+
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .beneficio-item {
+    padding: 18px;
+  }
+
+  .beneficio-icono {
     font-size: 36px;
   }
-  
-  .beneficios-grid,
-  .cobertura-grid,
-  .info-grid,
-  .contacto-final-grid,
-  .politicas-relacionadas-grid {
+
+  .beneficio-item h3 {
+    font-size: 16px;
+  }
+
+  .beneficio-item p {
+    font-size: 13px;
+  }
+
+  .opciones-section,
+  .cobertura-section,
+  .informacion-section,
+  .faq-section,
+  .contacto-final-section,
+  .politicas-relacionadas-section {
+    padding: 50px 20px;
+  }
+
+  .opciones-section h2,
+  .cobertura-section h2,
+  .informacion-section h2,
+  .faq-section h2,
+  .contacto-final-section h2,
+  .politicas-relacionadas-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+  }
+
+  .opciones-grid {
     grid-template-columns: 1fr;
   }
-  
-  .beneficio-item {
-    padding: 20px 15px;
-  }
-  
+
   .opcion-card {
-    padding: 25px;
+    padding: 28px;
   }
-  
+
+  .opcion-header {
+    gap: 12px;
+  }
+
+  .opcion-header h3 {
+    font-size: 22px;
+  }
+
+  .opcion-info {
+    padding: 16px;
+  }
+
+  .info-item {
+    font-size: 14px;
+  }
+
+  .opcion-descripcion {
+    font-size: 15px;
+  }
+
+  .opcion-detalles li {
+    font-size: 13px;
+    padding: 8px 0 8px 20px;
+  }
+
+  .cobertura-intro {
+    font-size: 15px;
+  }
+
+  .cobertura-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .zona-card {
-    padding: 25px 15px;
+    padding: 24px;
+  }
+
+  .zona-icono {
+    font-size: 36px;
+  }
+
+  .zona-card h3 {
+    font-size: 18px;
+  }
+
+  .zona-item {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .info-card {
+    padding: 24px;
+  }
+
+  .info-card h3 {
+    font-size: 18px;
+  }
+
+  .info-list li {
+    font-size: 14px;
+  }
+
+  .faq-lista {
+    gap: 12px;
+  }
+
+  .faq-item {
+    border-radius: 10px;
+  }
+
+  .faq-header {
+    padding: 16px 20px;
+  }
+
+  .faq-header h3 {
+    font-size: 15px;
+  }
+
+  .faq-icono {
+    font-size: 20px;
+  }
+
+  .faq-respuesta {
+    padding: 0 20px 16px;
+  }
+
+  .faq-respuesta p {
+    font-size: 14px;
+  }
+
+  .contacto-final-intro {
+    font-size: 16px;
+  }
+
+  .contacto-final-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contacto-final-card {
+    padding: 24px;
+  }
+
+  .contacto-final-icono {
+    font-size: 36px;
+  }
+
+  .contacto-final-card h3 {
+    font-size: 18px;
+  }
+
+  .contacto-final-card p {
+    font-size: 14px;
+  }
+
+  .contacto-final-button {
+    padding: 12px 32px;
+    font-size: 16px;
+  }
+
+  .politicas-relacionadas-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .politica-relacionada-card {
+    padding: 24px;
+  }
+
+  .politica-relacionada-icono {
+    font-size: 40px;
+  }
+
+  .politica-relacionada-card h3 {
+    font-size: 18px;
+  }
+
+  .politica-relacionada-card p {
+    font-size: 13px;
+  }
+
+  .politica-relacionada-link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-section {
+    padding: 40px 16px 36px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .beneficios-rapidos {
+    padding: 32px 16px;
+  }
+
+  .beneficios-grid {
+    gap: 12px;
+  }
+
+  .beneficio-item {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .beneficio-icono {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .beneficio-item h3 {
+    font-size: 14px;
+  }
+
+  .beneficio-item p {
+    font-size: 12px;
+  }
+
+  .opciones-section,
+  .cobertura-section,
+  .informacion-section,
+  .faq-section,
+  .contacto-final-section,
+  .politicas-relacionadas-section {
+    padding: 40px 16px;
+  }
+
+  .opciones-section h2,
+  .cobertura-section h2,
+  .informacion-section h2,
+  .faq-section h2,
+  .contacto-final-section h2,
+  .politicas-relacionadas-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+  }
+
+  .opciones-grid {
+    gap: 12px;
+  }
+
+  .opcion-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .opcion-header {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .opcion-header h3 {
+    font-size: 18px;
+  }
+
+  .opcion-icono {
+    font-size: 36px;
+  }
+
+  .opcion-info {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .info-item {
+    font-size: 12px;
+  }
+
+  .opcion-descripcion {
+    font-size: 14px;
+  }
+
+  .opcion-detalles li {
+    font-size: 12px;
+    padding: 6px 0 6px 18px;
+  }
+
+  .cobertura-intro {
+    font-size: 14px;
+  }
+
+  .cobertura-grid {
+    gap: 12px;
+  }
+
+  .zona-card {
+    padding: 16px;
+  }
+
+  .zona-icono {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .zona-card h3 {
+    font-size: 16px;
+  }
+
+  .zona-item {
+    font-size: 11px;
+    padding: 6px 0;
+  }
+
+  .info-grid {
+    gap: 12px;
+  }
+
+  .info-card {
+    padding: 16px;
+  }
+
+  .info-card h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .info-list li {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .faq-lista {
+    gap: 10px;
+  }
+
+  .faq-item {
+    border-radius: 8px;
+  }
+
+  .faq-header {
+    padding: 12px 16px;
+  }
+
+  .faq-header h3 {
+    font-size: 13px;
+  }
+
+  .faq-icono {
+    font-size: 18px;
+  }
+
+  .faq-respuesta {
+    padding: 0 16px 12px;
+  }
+
+  .faq-respuesta p {
+    font-size: 12px;
+  }
+
+  .contacto-final-intro {
+    font-size: 14px;
+  }
+
+  .contacto-final-grid {
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .contacto-final-card {
+    padding: 16px;
+  }
+
+  .contacto-final-icono {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .contacto-final-card h3 {
+    font-size: 16px;
+  }
+
+  .contacto-final-card p {
+    font-size: 12px;
+  }
+
+  .contacto-final-button {
+    padding: 10px 24px;
+    font-size: 14px;
+    border-radius: 24px;
+  }
+
+  .politicas-relacionadas-grid {
+    gap: 12px;
+  }
+
+  .politica-relacionada-card {
+    padding: 16px;
+  }
+
+  .politica-relacionada-icono {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .politica-relacionada-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .politica-relacionada-card p {
+    font-size: 12px;
+  }
+
+  .politica-relacionada-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 479px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .hero-section {
+    padding: 32px 12px 28px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .beneficios-rapidos {
+    padding: 24px 12px;
+  }
+
+  .beneficios-grid {
+    gap: 10px;
+  }
+
+  .beneficio-item {
+    padding: 12px;
+  }
+
+  .beneficio-icono {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .beneficio-item h3 {
+    font-size: 13px;
+  }
+
+  .beneficio-item p {
+    font-size: 11px;
+  }
+
+  .opciones-section,
+  .cobertura-section,
+  .informacion-section,
+  .faq-section,
+  .contacto-final-section,
+  .politicas-relacionadas-section {
+    padding: 32px 12px;
+  }
+
+  .opciones-section h2,
+  .cobertura-section h2,
+  .informacion-section h2,
+  .faq-section h2,
+  .contacto-final-section h2,
+  .politicas-relacionadas-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .opciones-card {
+    padding: 16px;
+  }
+
+  .opcion-header h3 {
+    font-size: 16px;
+  }
+
+  .opcion-icono {
+    font-size: 32px;
+  }
+
+  .opcion-info {
+    padding: 10px;
+  }
+
+  .info-item {
+    font-size: 11px;
+  }
+
+  .opcion-descripcion {
+    font-size: 13px;
+  }
+
+  .opcion-detalles li {
+    font-size: 11px;
+  }
+
+  .cobertura-intro {
+    font-size: 12px;
+  }
+
+  .cobertura-grid {
+    gap: 10px;
+  }
+
+  .zona-card {
+    padding: 14px;
+  }
+
+  .zona-icono {
+    font-size: 28px;
+  }
+
+  .zona-card h3 {
+    font-size: 14px;
+  }
+
+  .zona-item {
+    font-size: 10px;
+  }
+
+  .info-card {
+    padding: 14px;
+  }
+
+  .info-card h3 {
+    font-size: 14px;
+  }
+
+  .info-list li {
+    font-size: 11px;
+  }
+
+  .faq-lista {
+    gap: 8px;
+  }
+
+  .faq-header {
+    padding: 10px 12px;
+  }
+
+  .faq-header h3 {
+    font-size: 12px;
+  }
+
+  .faq-icono {
+    font-size: 16px;
+  }
+
+  .faq-respuesta {
+    padding: 0 12px 10px;
+  }
+
+  .faq-respuesta p {
+    font-size: 11px;
+  }
+
+  .contacto-final-intro {
+    font-size: 12px;
+  }
+
+  .contacto-final-grid {
+    gap: 10px;
+  }
+
+  .contacto-final-card {
+    padding: 14px;
+  }
+
+  .contacto-final-icono {
+    font-size: 28px;
+  }
+
+  .contacto-final-card h3 {
+    font-size: 14px;
+  }
+
+  .contacto-final-card p {
+    font-size: 11px;
+  }
+
+  .contacto-final-button {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+
+  .politicas-relacionadas-grid {
+    gap: 10px;
+  }
+
+  .politica-relacionada-card {
+    padding: 14px;
+  }
+
+  .politica-relacionada-icono {
+    font-size: 28px;
+  }
+
+  .politica-relacionada-card h3 {
+    font-size: 14px;
+  }
+
+  .politica-relacionada-card p {
+    font-size: 11px;
+  }
+
+  .politica-relacionada-link {
+    font-size: 11px;
   }
 }

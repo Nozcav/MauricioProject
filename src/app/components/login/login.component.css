@@ -156,3 +156,188 @@
 .toggle-form a:hover {
   text-decoration: underline;
 }
+
+/* ============================================
+   MEDIA QUERIES - LOGIN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .login-page {
+    padding: 24px 16px;
+    min-height: auto;
+  }
+
+  .login-container {
+    padding: 40px 24px;
+    max-width: none;
+  }
+
+  .login-header .icono-moneda {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .login-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .login-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .login-form h2 {
+    font-size: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    font-size: 0.7rem;
+  }
+
+  .form-group input {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+
+  .btn-primary {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .toggle-form {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-page {
+    padding: 20px 12px;
+  }
+
+  .login-container {
+    padding: 32px 20px;
+  }
+
+  .login-header .icono-moneda {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .login-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .login-subtitle {
+    font-size: 0.75rem;
+    margin-top: 8px;
+  }
+
+  .login-message {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    margin-bottom: 16px;
+  }
+
+  .login-form h2 {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .form-group label {
+    font-size: 0.65rem;
+    margin-bottom: 6px;
+  }
+
+  .form-group input {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+
+  .btn-primary {
+    padding: 12px;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .toggle-form {
+    margin-top: 16px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 479px) {
+  .login-page {
+    padding: 16px 10px;
+  }
+
+  .login-container {
+    padding: 24px 16px;
+    border: 1px solid var(--color-borde);
+  }
+
+  .login-header {
+    margin-bottom: 24px;
+  }
+
+  .login-header .icono-moneda {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .login-header h1 {
+    font-size: 1rem;
+  }
+
+  .login-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .login-message {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+  }
+
+  .login-form h2 {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group label {
+    font-size: 0.6rem;
+    margin-bottom: 4px;
+  }
+
+  .form-group input {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+
+  .btn-primary {
+    padding: 10px;
+    font-size: 11px;
+    margin-top: 6px;
+  }
+
+  .toggle-form {
+    margin-top: 12px;
+    font-size: 10px;
+  }
+}
