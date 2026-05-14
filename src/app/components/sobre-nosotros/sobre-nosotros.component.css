@@ -161,7 +161,7 @@
 
 .mision-card p,
 .vision-card p {
-  color: var(--color-texto-claro);
+  color: #333;
   line-height: 1.8;
   font-size: 16px;
 }
@@ -216,7 +216,7 @@
 }
 
 .valor-card p {
-  color: var(--color-texto-claro);
+  color: #333;
   line-height: 1.6;
   font-size: 14px;
 }
@@ -260,7 +260,7 @@
 }
 
 .logro-texto {
-  color: var(--color-texto-claro);
+  color: #333;
   font-size: 16px;
 }
 
@@ -280,7 +280,7 @@
 
 .equipo-intro {
   text-align: center;
-  color: var(--color-texto-claro);
+  color: #333;
   font-size: 18px;
   margin-bottom: 50px;
   max-width: 600px;
@@ -329,7 +329,7 @@
 }
 
 .equipo-card p {
-  color: var(--color-texto-claro);
+  color: #333;
   line-height: 1.6;
   font-size: 14px;
 }
@@ -385,7 +385,7 @@
 }
 
 .proceso-step p {
-  color: var(--color-texto-claro);
+  color: #333;
   line-height: 1.6;
   font-size: 14px;
 }
@@ -419,7 +419,7 @@
 }
 
 .cta-section p {
-  color: var(--color-texto-claro);
+  color: #333;
   font-size: 18px;
   margin-bottom: 30px;
   position: relative;

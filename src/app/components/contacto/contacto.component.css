@@ -110,12 +110,16 @@
 /* Formulario Section */
 .formulario-section {
   padding: 80px 0;
+  width: 100%;
+  text-align: center;
 }
 
 .formulario-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .formulario-container h2, .mapa-container h2 {
@@ -223,6 +227,13 @@
 }
 
 /* Mapa Placeholder */
+.mapa-container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .mapa-placeholder {
   height: 300px;
   background: var(--color-fondo-hueso);
@@ -232,6 +243,10 @@
   align-items: center;
   border: 1px solid var(--color-borde);
   margin-bottom: 20px;
+}
+
+.mapa-info {
+  text-align: left;
 }
 
 .mapa-info h4 { font-family: var(--fuente-titulo); margin-bottom: 10px; }
